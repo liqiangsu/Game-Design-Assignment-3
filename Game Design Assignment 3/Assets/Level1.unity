@@ -278,6 +278,7 @@ MonoBehaviour:
   CellSpacing: .100000001
   FixedCell: {fileID: 126090, guid: d4646a2a2f65f264ebd297ef9777c7ff, type: 2}
   MoveableCell: {fileID: 120058, guid: ef322b614bd0ad944a18ba1394a038ed, type: 2}
+  EmptyCell: {fileID: 113332, guid: 4430fe7b81ca50148b9de99368f85a85, type: 2}
   CellParent: {fileID: 582396795}
 --- !u!4 &1125222863
 Transform:
