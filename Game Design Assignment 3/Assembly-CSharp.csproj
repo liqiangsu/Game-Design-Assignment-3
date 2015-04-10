@@ -58,7 +58,9 @@
      <Compile Include="Assets\Scripts\ResetCell.cs" />
      <Compile Include="Assets\Scripts\UI\ExitButton.cs" />
      <Compile Include="Assets\Scripts\UI\RestartButton.cs" />
+     <None Include="Assets\uIntelliSense\Editor\Resources\uintellisense-data.xml" />
      <None Include="Assets\Resources\Level1.txt" />
+     <None Include="Assets\uIntelliSense\LICENSE.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
