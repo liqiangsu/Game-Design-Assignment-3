@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PushableCell : MovableCell, IPushableCell {
+public class ChainPushableCell : MovableCell, IChainPushableCell {
     // Use this for initialization
 	void Start () {
 	    base.Start();

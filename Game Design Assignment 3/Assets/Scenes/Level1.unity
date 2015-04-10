@@ -280,6 +280,8 @@ MonoBehaviour:
   MoveableCell: {fileID: 120058, guid: ef322b614bd0ad944a18ba1394a038ed, type: 2}
   EmptyCell: {fileID: 113332, guid: 4430fe7b81ca50148b9de99368f85a85, type: 2}
   PushableCell: {fileID: 148492, guid: 97b5e4f472c15d9418200517f9a835de, type: 2}
+  ExitCell: {fileID: 192280, guid: 36736ba782c5b5447b986173025505e5, type: 2}
+  ResetCel: {fileID: 186126, guid: 04adc5d31974db142bfd549133d2d95b, type: 2}
   CellParent: {fileID: 582396795}
 --- !u!4 &1125222863
 Transform:
@@ -307,6 +309,7 @@ GameObject:
   - 81: {fileID: 1253825453}
   - 45: {fileID: 1253825458}
   - 114: {fileID: 1253825459}
+  - 45: {fileID: 1253825460}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -400,6 +403,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DampTime: .150000006
   Target: {fileID: 0}
+--- !u!45 &1253825460
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1253825452}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
 --- !u!1 &1294925697
 GameObject:
   m_ObjectHideFlags: 0

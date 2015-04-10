@@ -11,12 +11,13 @@ public class FollowCamera : MonoBehaviour
     private void Start()
     {
         camera = GetComponent<Camera>();
+        Target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        GetMouseInput();
+        //GetMouseInput();
         Move();
     }
 
@@ -29,10 +30,6 @@ public class FollowCamera : MonoBehaviour
             var isHit = Physics.Raycast(ray, out result, 1000f);
             if (isHit)
             {
-                /**
-                var targetPosition = result.collider.gameObject.transform.position;
-                Vector3 newPosition = new Vector3(targetPosition.x,targetPosition.y, this.transform.position.z);
-                this.transform.position = newPosition;**/
                 Target = result.collider.transform;
             }
         }

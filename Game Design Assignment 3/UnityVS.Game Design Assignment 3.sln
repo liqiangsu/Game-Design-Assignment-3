@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Game Design Assignment 3.CSharp", "UnityVS.Game Design Assignment 3.CSharp.csproj", "{B80A6C91-2D43-9EAC-1515-0043C2655366}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Game Design Assignment 3.CSharp.Editor", "UnityVS.Game Design Assignment 3.CSharp.Editor.csproj", "{D75D8D02-08B4-382B-F934-13F5F67C7CB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{B80A6C91-2D43-9EAC-1515-0043C2655366}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B80A6C91-2D43-9EAC-1515-0043C2655366}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B80A6C91-2D43-9EAC-1515-0043C2655366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D75D8D02-08B4-382B-F934-13F5F67C7CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D75D8D02-08B4-382B-F934-13F5F67C7CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D75D8D02-08B4-382B-F934-13F5F67C7CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D75D8D02-08B4-382B-F934-13F5F67C7CB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

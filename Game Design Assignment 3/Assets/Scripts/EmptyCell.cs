@@ -10,8 +10,9 @@ public class EmptyCell : MonoBehaviour , IReplacableCell {
     }
 
     // Use this for initialization
-	void Start () {
-	
+	void Start ()
+	{
+	    GetComponent<Renderer>().enabled = false;
 	}
 	
 	// Update is called once per frame

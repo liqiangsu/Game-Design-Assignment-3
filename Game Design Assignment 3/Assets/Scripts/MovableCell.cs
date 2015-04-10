@@ -40,19 +40,19 @@ public class MovableCell: MonoBehaviour, ICell
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetAxisRaw("Horizontal") == -1)
         {
             MoveLeft();
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetAxisRaw("Horizontal") == 1)
         {
             MoveRight();
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetAxisRaw("Vertical") == 1)
         {
             MoveUp();
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetAxisRaw("Vertical") == -1)
         {
             MoveDown();
         }
