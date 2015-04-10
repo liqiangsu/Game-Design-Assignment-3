@@ -59,18 +59,19 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ChainPushableCell.cs" />
     <Compile Include="Assets\Scripts\EmptyCell.cs" />
-    <Compile Include="Assets\Scripts\ExitButton.cs" />
     <Compile Include="Assets\Scripts\ExitCell.cs" />
     <Compile Include="Assets\Scripts\FixedCell.cs" />
     <Compile Include="Assets\Scripts\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
     <Compile Include="Assets\Scripts\MovableCell.cs" />
+    <Compile Include="Assets\Scripts\MoveOnceCell.cs" />
+    <Compile Include="Assets\Scripts\PlayerBlock.cs" />
     <Compile Include="Assets\Scripts\ResetCell.cs" />
-    <Compile Include="Assets\Scripts\RestartButton.cs" />
+    <Compile Include="Assets\Scripts\UI\ExitButton.cs" />
+    <Compile Include="Assets\Scripts\UI\RestartButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Level1.txt" />
-    <None Include="Assets\worm.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

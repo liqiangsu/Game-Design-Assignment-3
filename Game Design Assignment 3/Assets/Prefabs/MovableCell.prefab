@@ -33,7 +33,7 @@ GameObject:
   - 54: {fileID: 5443664}
   m_Layer: 0
   m_Name: MovableCell
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,7 @@ MeshRenderer:
   m_GameObject: {fileID: 120058}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: 061fc3d4e69ec3743bdc7088d11db9af, type: 2}
   m_SubsetIndices: 
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 120058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6904f08670d2c0a4c8e17806cd7c4f68, type: 3}
+  m_Script: {fileID: 11500000, guid: d877041960bdde94f94efb52ff5e3909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5

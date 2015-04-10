@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-
 public class Grid : MonoBehaviour
 {
     private int Width;
@@ -10,10 +9,10 @@ public class Grid : MonoBehaviour
     public GameObject FixedCell;
     public GameObject MoveableCell;
     public GameObject EmptyCell;
-    public GameObject PushableCell;
+    public GameObject ChainPushableCell;
     public GameObject ExitCell;
 	public GameObject ResetCel;
-
+    public GameObject PlayerCell;
     public GameObject CellParent;
 
     /// use to group the cells
@@ -70,14 +69,14 @@ public class Grid : MonoBehaviour
                         break;
 
                     case 'P':
-                        cells[i, j] = InitalCell(PushableCell, i, j);
+                        cells[i, j] = InitalCell(PlayerCell, i, j);
                         break;
                     case 'X':
                         cells[i, j] = InitalCell(ExitCell, i, j);
                         break;
-				case 'R':
-					cells[i, j] = InitalCell(ResetCel, i, j);
-					break;
+				    case 'R':
+					    cells[i, j] = InitalCell(ResetCel, i, j);
+					    break;
 				default:
 					cells[i, j] = InitalCell(EmptyCell, i, j);
                         break;
@@ -110,9 +109,9 @@ public class Grid : MonoBehaviour
 	void Update () {
 	}
 
-    private Vector2 GetPosition(int x, int y)
+    private Vector3 GetPosition(int x, int y)
     {
-        return new Vector2(x * CellSize + x * CellSpacing , y * -CellSize - y * CellSpacing);
+        return new Vector3(x * CellSize + x * CellSpacing ,0, y * -CellSize - y * CellSpacing);
     }
     public Vector3 MoveLeft(ICell aCell)
     {
@@ -140,15 +139,34 @@ public class Grid : MonoBehaviour
     private Vector3 Move(ICell aCell,
         ICell bCell)
     {
-        if (bCell is IChainPushableCell)
+        if (bCell is MoveOnceCell && !(aCell is MoveOnceCell))
         {
-            IChainPushableCell pCell = bCell as IChainPushableCell;
+            var other = bCell as MoveOnceCell;
+            int oldX = aCell.GridX;
+            int oldY = aCell.GridY;
+            int newX = bCell.GridX;
+            int newY = bCell.GridY;
+            bool isMoved = MoveMoveableCells(other, oldX, oldY, newX, newY);
+            if (isMoved)
+            {
+                Destroy(cells[newX, newY].GameObject);
+                cells[newX, newY] = aCell;
+                aCell.GridX = newX;
+                aCell.GridY = newY;
+                cells[oldX, oldY] = InitalCell(EmptyCell, oldX, oldY);
+                var targetPosition = GetPosition(newX, newY);
+                return targetPosition;
+            }
+        }
+        if (bCell is ChainPushableCell)
+        {
+            ChainPushableCell pCell = bCell as ChainPushableCell;
             int oldX = aCell.GridX;
             int oldY = aCell.GridY;
             int newX = bCell.GridX;
             int newY = bCell.GridY;
 
-            var isMoved = MovePushableCellMoved(pCell, oldX, oldY, newX, newY);
+            var isMoved = MoveMoveableCells(pCell, oldX, oldY, newX, newY);
             if (isMoved) {
                 Destroy(cells[newX, newY].GameObject);
                 cells[newX, newY] = aCell;
@@ -191,7 +209,8 @@ public class Grid : MonoBehaviour
         return aCell.GameObject.transform.position;
     }
 
-    private static bool MovePushableCellMoved(IChainPushableCell pCell,
+    //return true if the cell is acutall moved
+    private static bool MoveMoveableCells(MovableCell pCell,
                                             int oldX,
                                             int oldY,
                                             int newX,
@@ -246,6 +265,11 @@ public interface ICell
     int GridX { set; get; }
     int GridY { set; get; }
     GameObject GameObject { get; }
+}
+
+public interface IPlayerCell : ICell
+{
+    
 }
 public interface IReplacableCell : ICell
 {

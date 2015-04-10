@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ChainPushableCell : MovableCell, IChainPushableCell {
+public class ChainPushableCell : MovableCell {
     // Use this for initialization
 	void Start () {
 	    base.Start();
@@ -15,24 +15,4 @@ public class ChainPushableCell : MovableCell, IChainPushableCell {
             tm.text = GridX + " , " + GridY;
         }
 	}
-
-    public new bool MoveLeft()
-    {
-        return base.MoveLeft();
-    }
-
-    public new bool MoveRight()
-    {
-        return base.MoveRight();
-    }
-
-    public new bool MoveUp()
-    {
-        return base.MoveUp();
-    }
-
-    public new bool MoveDown()
-    {
-        return base.MoveDown();
-    }
 }

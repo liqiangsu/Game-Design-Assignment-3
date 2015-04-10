@@ -17,7 +17,6 @@ public class FollowCamera : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //GetMouseInput();
         Move();
     }
 

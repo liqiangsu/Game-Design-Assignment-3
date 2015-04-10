@@ -24,7 +24,6 @@ public class MovableCell: MonoBehaviour, ICell
 	// Update is called once per frame
 	protected void Update ()
 	{
-	    GetKeyInput();
         SmoothMove();
 	    if (Debug.isDebugBuild)
 	    {
@@ -33,50 +32,27 @@ public class MovableCell: MonoBehaviour, ICell
 	    }
 	}
 
-    private void GetKeyInput()
-    {
-        //if object is moving , ignore input
-        if (IsMoved)
-        {
-            return;
-        }
-        if (Input.GetAxisRaw("Horizontal") == -1)
-        {
-            MoveLeft();
-        }
-        if (Input.GetAxisRaw("Horizontal") == 1)
-        {
-            MoveRight();
-        }
-        if (Input.GetAxisRaw("Vertical") == 1)
-        {
-            MoveUp();
-        }
-        if (Input.GetAxisRaw("Vertical") == -1)
-        {
-            MoveDown();
-        }
-    }
 
-    protected bool MoveLeft()
+
+    public bool MoveLeft()
     {
         var newPosition = Grid.MoveLeft(this);
         return IsPositionMoved(newPosition);
     }
 
-    protected bool MoveRight()
+    public bool MoveRight()
     {
         var newPosition = Grid.MoveRight(this);
         return IsPositionMoved(newPosition);
     }
 
-    protected bool MoveUp()
+    public bool MoveUp()
     {
         var newPosition = Grid.MoveUp(this);
         return IsPositionMoved(newPosition);
     }
 
-    protected bool MoveDown()
+    public bool MoveDown()
     {
         var newPosition = Grid.MoveDown(this);
         return IsPositionMoved(newPosition);
