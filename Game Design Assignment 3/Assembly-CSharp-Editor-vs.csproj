@@ -46,10 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\Map.cs" />
+     <Compile Include="Assets\Editor\LoadMap.cs" />
+     <None Include="Assets\uIntelliSense\Editor\Resources\uintellisense-data.xml" />
      <None Include="Assets\Resources\Level1.txt" />
-     <None Include="Assets\NewComputeShader.compute" />
-     <None Include="Assets\worm.shader" />
+     <None Include="Assets\uIntelliSense\LICENSE.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

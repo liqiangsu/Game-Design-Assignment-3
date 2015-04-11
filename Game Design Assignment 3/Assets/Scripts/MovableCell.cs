@@ -25,11 +25,6 @@ public class MovableCell: MonoBehaviour, ICell
 	protected void Update ()
 	{
         SmoothMove();
-	    if (Debug.isDebugBuild)
-	    {
-	        TextMesh tm = GetComponentInChildren<TextMesh>();
-	        tm.text = GridX + " , " + GridY;
-	    }
 	}
 
 
