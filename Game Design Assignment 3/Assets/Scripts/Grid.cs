@@ -67,7 +67,9 @@ public class Grid : MonoBehaviour
                     case 'F':
                         cells[i, j] = InitalCell(FixedCell, i, j);
                         break;
-
+                    case 'C':
+                        cells[i, j] = InitalCell(ChainPushableCell, i, j);
+                        break;
                     case 'P':
                         cells[i, j] = InitalCell(PlayerCell, i, j);
                         break;
