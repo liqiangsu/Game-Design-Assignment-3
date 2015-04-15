@@ -46,7 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\LoadMap.cs" />
+     <Compile Include="Assets\Editor\Map Load.cs" />
      <None Include="Assets\uIntelliSense\Editor\Resources\uintellisense-data.xml" />
      <None Include="Assets\Resources\Level1.txt" />
      <None Include="Assets\uIntelliSense\LICENSE.txt" />

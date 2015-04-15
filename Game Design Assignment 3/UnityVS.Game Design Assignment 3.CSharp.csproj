@@ -7,14 +7,16 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B80A6C91-2D43-9EAC-1515-0043C2655366}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.0.0f4</UnityVersion>
@@ -54,16 +56,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ChainPushableCell.cs" />
-    <Compile Include="Assets\Scripts\EmptyCell.cs" />
-    <Compile Include="Assets\Scripts\ExitCell.cs" />
-    <Compile Include="Assets\Scripts\FixedCell.cs" />
+    <Compile Include="Assets\Scripts\ChainPushableGridCell.cs" />
+    <Compile Include="Assets\Scripts\EmptyGridCell.cs" />
+    <Compile Include="Assets\Scripts\ExitGridCell.cs" />
+    <Compile Include="Assets\Scripts\FixedGridCell.cs" />
     <Compile Include="Assets\Scripts\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
-    <Compile Include="Assets\Scripts\MovableCell.cs" />
-    <Compile Include="Assets\Scripts\MoveOnceCell.cs" />
+    <Compile Include="Assets\Scripts\MovableGridCell.cs" />
+    <Compile Include="Assets\Scripts\MoveOnceGridCell.cs" />
     <Compile Include="Assets\Scripts\PlayerBlock.cs" />
-    <Compile Include="Assets\Scripts\ResetCell.cs" />
+    <Compile Include="Assets\Scripts\ResetGridCell.cs" />
     <Compile Include="Assets\Scripts\UI\ExitButton.cs" />
     <Compile Include="Assets\Scripts\UI\RestartButton.cs" />
   </ItemGroup>

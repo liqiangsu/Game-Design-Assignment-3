@@ -46,16 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ChainPushableCell.cs" />
-     <Compile Include="Assets\Scripts\EmptyCell.cs" />
-     <Compile Include="Assets\Scripts\ExitCell.cs" />
-     <Compile Include="Assets\Scripts\FixedCell.cs" />
+     <Compile Include="Assets\Scripts\ChainPushableGridCell.cs" />
+     <Compile Include="Assets\Scripts\EmptyGridCell.cs" />
+     <Compile Include="Assets\Scripts\ExitGridCell.cs" />
+     <Compile Include="Assets\Scripts\FixedGridCell.cs" />
      <Compile Include="Assets\Scripts\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Grid.cs" />
-     <Compile Include="Assets\Scripts\MovableCell.cs" />
-     <Compile Include="Assets\Scripts\MoveOnceCell.cs" />
+     <Compile Include="Assets\Scripts\MovableGridCell.cs" />
+     <Compile Include="Assets\Scripts\MoveOnceGridCell.cs" />
      <Compile Include="Assets\Scripts\PlayerBlock.cs" />
-     <Compile Include="Assets\Scripts\ResetCell.cs" />
+     <Compile Include="Assets\Scripts\ResetGridCell.cs" />
      <Compile Include="Assets\Scripts\UI\ExitButton.cs" />
      <Compile Include="Assets\Scripts\UI\RestartButton.cs" />
      <None Include="Assets\uIntelliSense\Editor\Resources\uintellisense-data.xml" />

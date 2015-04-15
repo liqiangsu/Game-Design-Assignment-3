@@ -17,21 +17,33 @@ public class Grid : MonoBehaviour
 
     /// use to group the cells
     private static int CellId = 0;
-    private ICell[,] cells;
+    private GridCell[,] gridCells;
 
     // Use this for initialization
 	void Start ()
 	{
         ReadLevel("Level1");
+        //Load();
 	}
 
-    private void ReadLevel(string levelName)
+    private void Load()
+    {
+        var gameObjects = FindObjectsOfType<GameObject>();
+        Debug.Log(gameObjects);
+    }
+
+    public void ReadLevel(string levelName)
     {
         TextAsset level = Resources.Load(levelName) as TextAsset;
         if (!level)
         {
             throw new Exception("Level file not Found");
         }
+        if (CellParent == null)
+        {
+            CellParent = new GameObject(){name = "Boxes"};
+        }
+
         var lines = level.text.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
         Height = lines.Length;
         Width = lines[0].Length;
@@ -54,33 +66,33 @@ public class Grid : MonoBehaviour
 
     private void InstanceGrid(char[,] mapData)
     {
-        cells = new ICell[Width,Height];
-        for (int i = 0; i < cells.GetLength(0); i++)
+        gridCells = new GridCell[Width,Height];
+        for (int i = 0; i < gridCells.GetLength(0); i++)
         {
-            for (int j = 0; j < cells.GetLength(1); j++)
+            for (int j = 0; j < gridCells.GetLength(1); j++)
             {
                 switch (mapData[i,j])
                 {
                     case 'M':
-                        cells[i, j] = InitalCell(MoveableCell, i, j);
+                        gridCells[i, j] = InitalCell(MoveableCell, i, j);
                         break;
                     case 'F':
-                        cells[i, j] = InitalCell(FixedCell, i, j);
+                        gridCells[i, j] = InitalCell(FixedCell, i, j);
                         break;
                     case 'C':
-                        cells[i, j] = InitalCell(ChainPushableCell, i, j);
+                        gridCells[i, j] = InitalCell(ChainPushableCell, i, j);
                         break;
                     case 'P':
-                        cells[i, j] = InitalCell(PlayerCell, i, j);
+                        gridCells[i, j] = InitalCell(PlayerCell, i, j);
                         break;
                     case 'X':
-                        cells[i, j] = InitalCell(ExitCell, i, j);
+                        gridCells[i, j] = InitalCell(ExitCell, i, j);
                         break;
 				    case 'R':
-					    cells[i, j] = InitalCell(ResetCel, i, j);
+					    gridCells[i, j] = InitalCell(ResetCel, i, j);
 					    break;
 				default:
-					cells[i, j] = InitalCell(EmptyCell, i, j);
+					gridCells[i, j] = InitalCell(EmptyCell, i, j);
                         break;
                 }
 
@@ -90,22 +102,21 @@ public class Grid : MonoBehaviour
     }
 
 
-    private ICell InitalCell(GameObject gameObject, int x, int y)
+    private GridCell InitalCell(GameObject gameObject, int x, int y)
     {
         GameObject instance = Instantiate(gameObject);
         instance.name += "_" + CellId++;
-        Component component = instance.GetComponent(typeof(ICell));
-        ICell cell = component as ICell;
-        if (cell == null)
+        GridCell gridCell = instance.GetComponent<GridCell>();
+        if (gridCell == null)
         {
             throw new Exception("Cell Create Faild, Objective do not have ICell component");
         }
-        cell.GridX = x;
-        cell.GridY = y;
+        gridCell.GridX = x;
+        gridCell.GridY = y;
         instance.transform.position = GetPosition(x, y);
         instance.transform.SetParent(CellParent.transform);
 
-        return cell;
+        return gridCell;
     }
 	// Update is called once per frame
 	void Update () {
@@ -115,104 +126,104 @@ public class Grid : MonoBehaviour
     {
         return new Vector3(x * CellSize + x * CellSpacing ,0, y * -CellSize - y * CellSpacing);
     }
-    public Vector3 MoveLeft(ICell aCell)
+    public Vector3 MoveLeft(GridCell aGridCell)
     {
-        if (aCell.GridX <= 0)
+        if (aGridCell.GridX <= 0)
         {
             //if not moved return same position
-            return aCell.GameObject.transform.position;
+            return aGridCell.gameObject.transform.position;
         }
-        ICell bCell = cells[aCell.GridX -1, aCell.GridY];
+        GridCell bGridCell = gridCells[aGridCell.GridX -1, aGridCell.GridY];
 
-        return Move(aCell, bCell);
+        return Move(aGridCell, bGridCell);
     }
     
-    public Vector3 MoveRight(ICell aCell)
+    public Vector3 MoveRight(GridCell aGridCell)
     {
-        if (aCell.GridX >= cells.GetLength(0) - 1)
+        if (aGridCell.GridX >= gridCells.GetLength(0) - 1)
         {
             //if not moved return same position
-            return aCell.GameObject.transform.position;
+            return aGridCell.gameObject.transform.position;
         }
-        ICell bCell = cells[aCell.GridX + 1, aCell.GridY];
-        return Move(aCell, bCell);
+        GridCell bGridCell = gridCells[aGridCell.GridX + 1, aGridCell.GridY];
+        return Move(aGridCell, bGridCell);
     }
 
-    private Vector3 Move(ICell aCell,
-        ICell bCell)
+    private Vector3 Move(GridCell aGridCell,
+        GridCell bGridCell)
     {
-        if (bCell is MoveOnceCell && !(aCell is MoveOnceCell))
+        if (bGridCell is MoveOnceGridCell && !(aGridCell is MoveOnceGridCell))
         {
-            var other = bCell as MoveOnceCell;
-            int oldX = aCell.GridX;
-            int oldY = aCell.GridY;
-            int newX = bCell.GridX;
-            int newY = bCell.GridY;
+            var other = bGridCell as MoveOnceGridCell;
+            int oldX = aGridCell.GridX;
+            int oldY = aGridCell.GridY;
+            int newX = bGridCell.GridX;
+            int newY = bGridCell.GridY;
             bool isMoved = MoveMoveableCells(other, oldX, oldY, newX, newY);
             if (isMoved)
             {
-                Destroy(cells[newX, newY].GameObject);
-                cells[newX, newY] = aCell;
-                aCell.GridX = newX;
-                aCell.GridY = newY;
-                cells[oldX, oldY] = InitalCell(EmptyCell, oldX, oldY);
+                Destroy(gridCells[newX, newY].gameObject);
+                gridCells[newX, newY] = aGridCell;
+                aGridCell.GridX = newX;
+                aGridCell.GridY = newY;
+                gridCells[oldX, oldY] = InitalCell(EmptyCell, oldX, oldY);
                 var targetPosition = GetPosition(newX, newY);
                 return targetPosition;
             }
         }
-        if (bCell is ChainPushableCell)
+        if (bGridCell is ChainPushableGridCell)
         {
-            ChainPushableCell pCell = bCell as ChainPushableCell;
-            int oldX = aCell.GridX;
-            int oldY = aCell.GridY;
-            int newX = bCell.GridX;
-            int newY = bCell.GridY;
+            ChainPushableGridCell pGridCell = bGridCell as ChainPushableGridCell;
+            int oldX = aGridCell.GridX;
+            int oldY = aGridCell.GridY;
+            int newX = bGridCell.GridX;
+            int newY = bGridCell.GridY;
 
-            var isMoved = MoveMoveableCells(pCell, oldX, oldY, newX, newY);
+            var isMoved = MoveMoveableCells(pGridCell, oldX, oldY, newX, newY);
             if (isMoved) {
-                Destroy(cells[newX, newY].GameObject);
-                cells[newX, newY] = aCell;
-                aCell.GridX = newX;
-                aCell.GridY = newY;
-                cells[oldX, oldY] = InitalCell(EmptyCell, oldX, oldY);
+                Destroy(gridCells[newX, newY].gameObject);
+                gridCells[newX, newY] = aGridCell;
+                aGridCell.GridX = newX;
+                aGridCell.GridY = newY;
+                gridCells[oldX, oldY] = InitalCell(EmptyCell, oldX, oldY);
                 var targetPosition = GetPosition(newX, newY);
                 return targetPosition;
             }
         }
-        if (bCell is IReplacableCell)
+        if (bGridCell is EmptyGridCell)
         {
-            int oldX = aCell.GridX;
-            int oldY = aCell.GridY;
-            int newX = bCell.GridX;
-            int newY = bCell.GridY;
+            int oldX = aGridCell.GridX;
+            int oldY = aGridCell.GridY;
+            int newX = bGridCell.GridX;
+            int newY = bGridCell.GridY;
 
-            Destroy(bCell.GameObject);
-            cells[newX, newY] = aCell;
-            aCell.GridX = newX;
-            aCell.GridY = newY;
-            cells[oldX, oldY] = InitalCell(EmptyCell, oldX, oldY);
+            Destroy(bGridCell.gameObject);
+            gridCells[newX, newY] = aGridCell;
+            aGridCell.GridX = newX;
+            aGridCell.GridY = newY;
+            gridCells[oldX, oldY] = InitalCell(EmptyCell, oldX, oldY);
             var targetPosition = GetPosition(newX, newY);
             return targetPosition;
         }
-        if(bCell is IExitCell || bCell is IResetCell)
+        if(bGridCell is ExitGridCell || bGridCell is ResetGridCell)
         {
-            int oldX = aCell.GridX;
-            int oldY = aCell.GridY;
-            int newX = bCell.GridX;
-            int newY = bCell.GridY;
-            cells[newX, newY] = aCell;
-            aCell.GridX = newX;
-            aCell.GridY = newY;
-            cells[oldX, oldY] = InitalCell(EmptyCell, oldX, oldY);
+            int oldX = aGridCell.GridX;
+            int oldY = aGridCell.GridY;
+            int newX = bGridCell.GridX;
+            int newY = bGridCell.GridY;
+            gridCells[newX, newY] = aGridCell;
+            aGridCell.GridX = newX;
+            aGridCell.GridY = newY;
+            gridCells[oldX, oldY] = InitalCell(EmptyCell, oldX, oldY);
             var targetPosition = GetPosition(newX, newY);
             return targetPosition;
         }
 
-        return aCell.GameObject.transform.position;
+        return aGridCell.gameObject.transform.position;
     }
 
     //return true if the cell is acutall moved
-    private static bool MoveMoveableCells(MovableCell pCell,
+    private static bool MoveMoveableCells(MovableGridCell pGridCell,
                                             int oldX,
                                             int oldY,
                                             int newX,
@@ -222,75 +233,55 @@ public class Grid : MonoBehaviour
         bool isMoved = false;
         if (newX < oldX)
         {
-            isMoved = pCell.MoveLeft();
+            isMoved = pGridCell.MoveLeft();
         }
         else if (newX > oldX)
         {
-            isMoved = pCell.MoveRight();
+            isMoved = pGridCell.MoveRight();
         }
         if (newY < oldY)
         {
-            isMoved = pCell.MoveUp();
+            isMoved = pGridCell.MoveUp();
         }
         else if (newY > oldY)
         {
-            isMoved = pCell.MoveDown();
+            isMoved = pGridCell.MoveDown();
         }
         return isMoved;
     }
 
-    public Vector3 MoveUp(ICell aCell)
+    public Vector3 MoveUp(GridCell aGridCell)
     {
-        if (aCell.GridY <= 0)
+        if (aGridCell.GridY <= 0)
         {
             //if not moved return same position
-            return aCell.GameObject.transform.position;
+            return aGridCell.gameObject.transform.position;
         }
-        ICell bCell = cells[aCell.GridX, aCell.GridY -1];
-        return Move(aCell, bCell);
+        GridCell bGridCell = gridCells[aGridCell.GridX, aGridCell.GridY -1];
+        return Move(aGridCell, bGridCell);
     }
 
-    public Vector3 MoveDown(ICell aCell)
+    public Vector3 MoveDown(GridCell aGridCell)
     {
-        if (aCell.GridY >= cells.GetLength(1) - 1)
+        if (aGridCell.GridY >= gridCells.GetLength(1) - 1)
         {
             //if not moved return same position
-            return aCell.GameObject.transform.position;
+            return aGridCell.gameObject.transform.position;
         }
-        ICell bCell = cells[aCell.GridX, aCell.GridY + 1];
-        return Move(aCell, bCell);
+        GridCell bGridCell = gridCells[aGridCell.GridX, aGridCell.GridY + 1];
+        return Move(aGridCell, bGridCell);
     }
 
 }
-public interface ICell
+public class GridCell :MonoBehaviour
 {
-    int GridX { set; get; }
-    int GridY { set; get; }
-    GameObject GameObject { get; }
+    [SerializeField] 
+    public int GridX;
+    [SerializeField] 
+    public int GridY;
 }
 
-public interface IPlayerCell : ICell
+public class PlayerGridCell : GridCell
 {
     
 }
-public interface IReplacableCell : ICell
-{
-
-}
-
-public interface IExitCell : ICell
-{
-    
-}
-public interface IResetCell : ICell{
-
-}
-
-public interface IChainPushableCell : ICell
-{
-    bool MoveLeft();
-    bool MoveRight();
-    bool MoveUp();
-    bool MoveDown();
-}
-

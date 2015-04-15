@@ -1,15 +1,7 @@
 ﻿using UnityEngine;
 
-public class MovableCell: MonoBehaviour, ICell
+public class MovableGridCell: GridCell
 {
-    public int GridX { get; set; }
-    public int GridY { get; set; }
-
-    public GameObject GameObject
-    {
-        get { return gameObject; }
-    }
-
     public float MoveSpeed = -50f;
     protected Grid Grid;
     protected Vector3 TargetPosition;

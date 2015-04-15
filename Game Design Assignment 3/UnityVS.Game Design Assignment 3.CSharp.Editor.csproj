@@ -108,7 +108,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\LoadMap.cs" />
+    <Compile Include="Assets\Editor\Map Load.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Level1.txt" />

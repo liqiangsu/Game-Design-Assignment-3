@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerBlock : MovableCell {
+public class PlayerBlock : MovableGridCell {
 
     protected void Start()
     {

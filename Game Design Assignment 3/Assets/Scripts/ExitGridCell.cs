@@ -2,16 +2,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class ExitCell : MonoBehaviour, IExitCell
-{
-    public int GridX { get; set; }
-    public int GridY { get; set; }
-
-    public GameObject GameObject
-    {
-        get { return gameObject; }
-    }
-
+public class ExitGridCell : GridCell{
+  
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveOnceCell : MovableCell
+public class MoveOnceGridCell : MovableGridCell
 {
 
 	// Use this for initialization
