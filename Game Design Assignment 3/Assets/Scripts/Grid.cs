@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 public class Grid : MonoBehaviour
 {
@@ -17,19 +18,26 @@ public class Grid : MonoBehaviour
 
     /// use to group the cells
     private static int CellId = 0;
-    private GridCell[,] gridCells;
+    public GridCell[,] gridCells;
 
     // Use this for initialization
 	void Start ()
 	{
-        ReadLevel("Level1");
-        //Load();
+        //ReadLevel("Level1");
+        Load();
 	}
 
     private void Load()
     {
-        var gameObjects = FindObjectsOfType<GameObject>();
-        Debug.Log(gameObjects);
+        GridCell[] gameObjects = FindObjectsOfType<GridCell>();
+
+        int maxX = gameObjects.Max(o => o.GridX);
+        int maxY = gameObjects.Max(o => o.GridY);
+        gridCells = new GridCell[maxX + 1,maxY +1];
+        foreach (GridCell cell in gameObjects)
+        {
+            gridCells[cell.GridX, cell.GridY] = cell;
+        }
     }
 
     public void ReadLevel(string levelName)
@@ -37,7 +45,7 @@ public class Grid : MonoBehaviour
         TextAsset level = Resources.Load(levelName) as TextAsset;
         if (!level)
         {
-            throw new Exception("Level file not Found");
+            throw new Exception("Level " + levelName +  " file not Found");
         }
         if (CellParent == null)
         {
@@ -272,16 +280,4 @@ public class Grid : MonoBehaviour
         return Move(aGridCell, bGridCell);
     }
 
-}
-public class GridCell :MonoBehaviour
-{
-    [SerializeField] 
-    public int GridX;
-    [SerializeField] 
-    public int GridY;
-}
-
-public class PlayerGridCell : GridCell
-{
-    
 }

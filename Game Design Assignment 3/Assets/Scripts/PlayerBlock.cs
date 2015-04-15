@@ -2,13 +2,7 @@
 using System.Collections;
 
 public class PlayerBlock : MovableGridCell {
-
-    protected void Start()
-    {
-        base.Start();
-    }
-
-    protected void Update()
+    protected new void Update()
     {
         GetKeyInput();
         base.Update();

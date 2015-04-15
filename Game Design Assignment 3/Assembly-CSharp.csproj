@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\FixedGridCell.cs" />
      <Compile Include="Assets\Scripts\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Grid.cs" />
+     <Compile Include="Assets\Scripts\GridCell.cs" />
      <Compile Include="Assets\Scripts\MovableGridCell.cs" />
      <Compile Include="Assets\Scripts\MoveOnceGridCell.cs" />
      <Compile Include="Assets\Scripts\PlayerBlock.cs" />

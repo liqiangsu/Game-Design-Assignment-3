@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using UnityEngine;
 using System.Collections;
 using UnityEditor;
 using Object = UnityEngine.Object;
@@ -9,8 +10,10 @@ public class MapLoad : MonoBehaviour {
     static void LoadMap()
     {
         Grid grid = FindObjectOfType<Grid>();
-        grid.ReadLevel("Level1");
 
+        string levelName = Path.GetFileNameWithoutExtension(EditorApplication.currentScene);
+        
+        grid.ReadLevel(levelName);
     }
 
 	// Use this for initialization
