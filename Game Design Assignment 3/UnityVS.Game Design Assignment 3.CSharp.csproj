@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MapIconHightlightAnimator.cs" />
+    <Compile Include="Assets\MapIconOnClick.cs" />
+    <Compile Include="Assets\MapRainParticleControler.cs" />
     <Compile Include="Assets\Scripts\ChainPushableGridCell.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\Scripts\EmptyGridCell.cs" />
