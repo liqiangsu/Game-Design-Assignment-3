@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 public class Grid : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class Grid : MonoBehaviour
         Load();
 	}
 
-    private void Load()
+    public void Load()
     {
         GridCell[] gameObjects = FindObjectsOfType<GridCell>();
 
