@@ -54,25 +54,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityVS.Game Design Assignment 3.CSharp.Plugins.csproj">
+      <Project>{CE3308B0-0CF8-9579-201D-6D637EDA4B73}</Project>
+      <Name>UnityVS.Game Design Assignment 3.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Cube.cs" />
+    <Compile Include="Assets\ExtraCharaterController.cs" />
     <Compile Include="Assets\MapIconHightlightAnimator.cs" />
     <Compile Include="Assets\MapIconOnClick.cs" />
     <Compile Include="Assets\MapRainParticleControler.cs" />
-    <Compile Include="Assets\Scripts\ChainPushableGridCell.cs" />
-    <Compile Include="Assets\Scripts\Constants.cs" />
-    <Compile Include="Assets\Scripts\EmptyGridCell.cs" />
+    <Compile Include="Assets\PushInput.cs" />
     <Compile Include="Assets\Scripts\ExitGridCell.cs" />
-    <Compile Include="Assets\Scripts\FixedGridCell.cs" />
-    <Compile Include="Assets\Scripts\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
-    <Compile Include="Assets\Scripts\GridCell.cs" />
-    <Compile Include="Assets\Scripts\MovableGridCell.cs" />
-    <Compile Include="Assets\Scripts\MoveOnceGridCell.cs" />
-    <Compile Include="Assets\Scripts\PlayerBlock.cs" />
     <Compile Include="Assets\Scripts\ResetGridCell.cs" />
     <Compile Include="Assets\Scripts\UI\ExitButton.cs" />
     <Compile Include="Assets\Scripts\UI\RestartButton.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
+    <Compile Include="Assets\ThirdPersonCharacter.cs" />
+    <Compile Include="Assets\ThirdPersonUserControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Level1.txt" />
@@ -88,6 +90,13 @@
     <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
     <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
     <None Include="Assets\ShaderForge\Readme.txt" />
+    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\TSF\Shaders\TSF.shader" />
+    <None Include="Assets\TSF\Shaders\TSFOutline.shader" />
+    <None Include="Assets\TSFOutline.shader" />
     <None Include="Assets\uIntelliSense\Editor\Resources\uintellisense-data.xml" />
     <None Include="Assets\uIntelliSense\LICENSE.txt" />
   </ItemGroup>

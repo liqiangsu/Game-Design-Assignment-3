@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 78ce8d4f6c3496645be52ce5461ed6ec
-timeCreated: 1428479708
+guid: 59fd1e82de42faf4d96d7b8338a768ed
+timeCreated: 1429771482
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences:
-  - FixedCell: {fileID: 126090, guid: d4646a2a2f65f264ebd297ef9777c7ff, type: 2}
-  - MoveableCell: {fileID: 120058, guid: ef322b614bd0ad944a18ba1394a038ed, type: 2}
-  - EmptyCell: {fileID: 113332, guid: 4430fe7b81ca50148b9de99368f85a85, type: 2}
-  - PushableCell: {fileID: 148492, guid: 97b5e4f472c15d9418200517f9a835de, type: 2}
-  - ExitCell: {fileID: 192280, guid: 36736ba782c5b5447b986173025505e5, type: 2}
-  - CellParent: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class ExitGridCell : GridCell{
+public class ExitGridCell : MonoBehaviour{
   
     void OnTriggerEnter(Collider other)
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ResetGridCell: GridCell{
+public class ResetGridCell: MonoBehaviour{
 
 
 	void OnTriggerEnter(Collider other){
