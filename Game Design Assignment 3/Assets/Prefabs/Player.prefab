@@ -225,9 +225,10 @@ GameObject:
   - 114: {fileID: 11414098}
   - 114: {fileID: 11445962}
   - 114: {fileID: 11436406}
+  - 114: {fileID: 11493352}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1790,7 +1791,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165490}
-  m_LocalRotation: {x: .532675147, y: .0703404471, z: .836132646, w: -.110415131}
+  m_LocalRotation: {x: .532675207, y: .0703404546, z: .836132765, w: -.110415146}
   m_LocalPosition: {x: 2.22714643e-05, y: -6.1504652e-05, z: .0260270257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2404,12 +2405,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovingTurnSpeed: 360
   m_StationaryTurnSpeed: 180
-  m_JumpPower: 15
-  m_GravityMultiplier: 2
+  m_JumpPower: 6
+  m_GravityMultiplier: 1
   m_RunCycleLegOffset: .200000003
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: .300000012
+  m_IsGrounded: 0
 --- !u!114 &11436406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2441,6 +2443,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11493352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c58f9d77aff824480f21118efa8abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumppingControlSpeed: 1
+  camera: {fileID: 0}
 --- !u!136 &13603354
 CapsuleCollider:
   m_ObjectHideFlags: 1

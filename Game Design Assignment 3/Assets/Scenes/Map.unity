@@ -110,12 +110,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 233506707}
-  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: 14.3000011, y: 44.7999992, z: 1.89999962}
+  m_LocalRotation: {x: .682272971, y: -.185751721, z: .185751751, w: .682272851}
+  m_LocalPosition: {x: 14.8999996, y: 47.2999992, z: 55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 559607955}
+  m_RootOrder: 0
 --- !u!199 &233506709
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b0dbc6a6a4af94b7abe141768b1d750e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -169,7 +169,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 9.26000023
+      scalar: 20
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -184,7 +184,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .586393058
+          value: .5
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -405,7 +405,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 10
+      scalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2464,7 +2464,7 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
-  field of view: 10
+  field of view: 45
   orthographic: 0
   orthographic size: 17.5499992
   m_Depth: -1
@@ -2485,9 +2485,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 559607950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.92000008, z: -299.519989}
+  m_LocalPosition: {x: 0, y: 7.92000008, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 233506708}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &1599072788
@@ -3671,7 +3672,7 @@ Transform:
   m_GameObject: {fileID: 1632009685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.6099997, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.31812561, y: 1.31812572, z: 1.31812572}
   m_Children:
   - {fileID: 501967793}
   m_Father: {fileID: 0}
