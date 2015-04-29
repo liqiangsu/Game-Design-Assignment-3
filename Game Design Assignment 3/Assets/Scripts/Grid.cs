@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class Grid : MonoBehaviour
@@ -10,6 +11,7 @@ public class Grid : MonoBehaviour
 	void Start ()
 	{
 	    ForeceGrid();
+        ForeceGrid("GridCell");
 	}
 	
 	// Update is called once per frame
@@ -17,9 +19,9 @@ public class Grid : MonoBehaviour
 	{
 	}
 
-    public void ForeceGrid()
+    public void ForeceGrid(String tag = "Cube")
     {
-        cubes = GameObject.FindGameObjectsWithTag("Cube");
+        cubes = GameObject.FindGameObjectsWithTag(tag);
         foreach (GameObject cube in cubes)
         {
             Vector3 oldPos = cube.transform.position;

@@ -7,6 +7,8 @@ public class PieceTrigger : MonoBehaviour
 {
 
     private Animator animator;
+    [SerializeField] private GameObject target;
+    [SerializeField] private GameObject _camera;
 	// Use this for initialization
 	void Start ()
 	{
@@ -22,7 +24,9 @@ public class PieceTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            animator.SetBool("IsTriggered", true);   
+            animator.SetBool("IsTriggered", true);
+            var controller = Camera.main.GetComponent<SmoothFollow>();
+            controller.target = target.transform;
         }
     }
 

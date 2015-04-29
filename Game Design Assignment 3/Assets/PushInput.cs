@@ -34,7 +34,7 @@ public class PushInput : MonoBehaviour
                 return;
             }
             lastPushTime = Time.time;
-            Debug.Log(lastPushTime);
+            
 
 
 	        var closest = FindFacingCubes();
@@ -50,6 +50,7 @@ public class PushInput : MonoBehaviour
 	        var normal = this.transform.forward;
             var dir = Mathf.Abs(normal.x) > Mathf.Abs(normal.z) ? new Vector3(normal.x < 0? -1 : 1, 0, 0) : new Vector3(0, 0, normal.z < 0 ? -1: 1);
             closest.GetComponent<Rigidbody>().velocity = dir * PushForce;
+            Debug.Log(dir);
 	    }else
 	    {
 	        GrappedGameObject = null;
@@ -83,17 +84,15 @@ public class PushInput : MonoBehaviour
         }
         var objectsInView = objectsInRange.Where(o => (Vector3.Angle((o.transform.position - position), this.transform.forward) < GrappingAngle));
 
-        var nearestObject = objectsInRange.OrderBy(o => (Vector3.Distance(o.transform.position, position))).First();
         if (!objectsInView.Any() || !objectsInRange.Any())
         {
             return null;
         }
+
+        var nearestObject = objectsInRange.OrderBy(o => (Vector3.Distance(o.transform.position, position))).First();
+
         var mostDirectViewingObject = objectsInView.OrderBy(o => (Vector3.Angle((o.transform.position - position), this.transform.forward))).First();
 
-        if (nearestObject == mostDirectViewingObject)
-        {
-            return nearestObject;
-        }
-        return null;
+        return nearestObject != mostDirectViewingObject ? null : nearestObject;
     }
 }
