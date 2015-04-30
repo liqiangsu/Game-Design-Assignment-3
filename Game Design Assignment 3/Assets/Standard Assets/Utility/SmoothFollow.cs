@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace UnityStandardAssets.Utility
+namespace Assets.Utility
 {
 	public class SmoothFollow : MonoBehaviour
 	{

@@ -2,6 +2,7 @@
 using System.Linq;
 using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Utility;
 
 public class PieceTrigger : MonoBehaviour
 {
@@ -25,8 +26,8 @@ public class PieceTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             animator.SetBool("IsTriggered", true);
-            var controller = Camera.main.GetComponent<SmoothFollow>();
-            controller.target = target.transform;
+            Camera.main.GetComponent<FollowTarget>().Target = target.transform;
+            target.GetComponent<Rigidbody>().useGravity = true;
         }
     }
 

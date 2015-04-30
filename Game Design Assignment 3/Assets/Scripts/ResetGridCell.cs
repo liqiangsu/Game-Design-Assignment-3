@@ -3,12 +3,16 @@ using System.Collections;
 
 public class ResetGridCell: MonoBehaviour{
 
-
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            Application.LoadLevel("Level1");
+        }
+    }
 	void OnTriggerEnter(Collider other){
-		Debug.Log("trigger");
-		Debug.Log (other);
-		//if (other is ICell || other.CompareTag ("Player")) {
+		if (other.CompareTag ("Player")) {
 			Application.LoadLevel("Level1");
-		//}
+		}
 	}
 }

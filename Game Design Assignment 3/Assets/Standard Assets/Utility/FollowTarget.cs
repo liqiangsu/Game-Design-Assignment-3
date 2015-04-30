@@ -6,13 +6,13 @@ namespace UnityStandardAssets.Utility
 {
     public class FollowTarget : MonoBehaviour
     {
-        public Transform target;
-        public Vector3 offset = new Vector3(0f, 7.5f, 0f);
+        public Transform Target;
+        public Vector3 Offset = new Vector3(0f, 7.5f, 0f);
 
 
         private void LateUpdate()
         {
-            transform.position = target.position + offset;
+            transform.position = Target.position + Offset;
         }
     }
 }
