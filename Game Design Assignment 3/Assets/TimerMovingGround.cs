@@ -8,7 +8,7 @@ public class TimerMovingGround : MonoBehaviour
     public bool IsStoped;
 	// Use this for initialization
 	void Start () {
-	    
+	    InvokeRepeating("Move",IntervalTimeInSecond,1);
 	}
 	
 	// Update is called once per frame
@@ -18,6 +18,7 @@ public class TimerMovingGround : MonoBehaviour
 
     void Move()
     {
-        
+        var old = transform.position;
+        transform.position = new Vector3(old.x, old.y, old.z +1);
     }
 }
