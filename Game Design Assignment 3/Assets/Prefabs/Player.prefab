@@ -278,6 +278,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &120986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 408336}
+  m_Layer: 0
+  m_Name: PushCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &121468
 GameObject:
   m_ObjectHideFlags: 1
@@ -1179,6 +1194,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &191304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 435234}
+  m_Layer: 0
+  m_Name: Eye
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &195284
 GameObject:
   m_ObjectHideFlags: 1
@@ -1390,6 +1420,18 @@ Transform:
   - {fileID: 465108}
   m_Father: {fileID: 429536}
   m_RootOrder: 0
+--- !u!4 &408336
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 463058}
+  m_RootOrder: 3
 --- !u!4 &410928
 Transform:
   m_ObjectHideFlags: 1
@@ -1695,6 +1737,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 486000}
   m_RootOrder: 2
+--- !u!4 &435234
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191304}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 463058}
+  m_RootOrder: 4
 --- !u!4 &436486
 Transform:
   m_ObjectHideFlags: 1
@@ -1917,12 +1971,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.07999992, y: .889999986, z: -3.03600001}
+  m_LocalPosition: {x: 4.07999992, y: .0299999993, z: 14.3199997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 456196}
   - {fileID: 498728}
   - {fileID: 406072}
+  - {fileID: 408336}
+  - {fileID: 435234}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &464904
@@ -2424,9 +2480,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPushState: 0
-  GrappingDistance: 1.20000005
+  GrappingDistance: 1.10000002
   GrappedGameObject: {fileID: 0}
-  GrappingAngle: 45
+  GrappingAngle: 30
   PushForce: 5.30000019
 --- !u!114 &11445962
 MonoBehaviour:
@@ -2461,7 +2517,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: cf63880488ec29f43a759ecd9c6c5123, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .300000012
+  m_Radius: .150000006
   m_Height: 1.60000002
   m_Direction: 1
   m_Center: {x: 0, y: .769999981, z: 0}

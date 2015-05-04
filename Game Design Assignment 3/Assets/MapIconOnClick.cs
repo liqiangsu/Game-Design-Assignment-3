@@ -7,7 +7,7 @@ public class MapIconOnClick : MonoBehaviour
     public String LevelName;
 	// Use this for initialization
 
-    void OnMouseUp()
+    public void OnMouseUp()
     {
         Application.LoadLevel(LevelName);
     }

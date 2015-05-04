@@ -7,9 +7,9 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: NornalPush
-  m_Shader: {fileID: 4800000, guid: e17d9c256530145c39caf8efc8c94a16, type: 3}
+  m_Shader: {fileID: 4800000, guid: e570c2adf90d6a24b8634788025bb2bb, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
@@ -32,14 +32,21 @@ Material:
         first:
           name: _Diffuse
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: e958c6041cfe445e987c73751e8d4082, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _Normal
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: cf20bfced7e912046a9ce991a4d775ec, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 2800000, guid: cf20bfced7e912046a9ce991a4d775ec, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -95,11 +102,19 @@ Material:
         first:
           name: _Gloss
         second: 0
+      data:
+        first:
+          name: _Bands
+        second: 8
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Diffuse
+        second: {r: .911764681, g: .876042485, b: .817906618, a: 1}
       data:
         first:
           name: _OutlineColor
@@ -108,10 +123,6 @@ Material:
         first:
           name: _Asymmetry
         second: {r: 0, g: .25, b: .5, a: 0}
-      data:
-        first:
-          name: _Diffuse
-        second: {r: .911764681, g: .876042485, b: .817906618, a: 1}
       data:
         first:
           name: _LightWrapping
