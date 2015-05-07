@@ -24,7 +24,6 @@ public class RuneCompleteChecker : MonoBehaviour
         {
             totalDistance += Vector3.Distance(Runes[i].position, Runes[i + 1].position);
         }
-        Debug.Log(totalDistance);
         if (totalDistance <= 3.5)
         {
             Debug.Log("completed");

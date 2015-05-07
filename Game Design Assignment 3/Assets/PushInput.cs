@@ -50,7 +50,6 @@ public class PushInput : MonoBehaviour
 	        var normal = this.transform.forward;
             var dir = Mathf.Abs(normal.x) > Mathf.Abs(normal.z) ? new Vector3(normal.x < 0? -1 : 1, 0, 0) : new Vector3(0, 0, normal.z < 0 ? -1: 1);
             closest.GetComponent<Rigidbody>().velocity = dir * PushForce;
-            Debug.Log(dir);
 	    }else
 	    {
 	        GrappedGameObject = null;

@@ -16,7 +16,7 @@ public class Cube : MonoBehaviour
 	    {
 	        IsMoved = true;
 	    }
-	    if (IsMoved && GetComponent<Rigidbody>().velocity.magnitude < 0.01)
+	    if (IsMoved && GetComponent<Rigidbody>().velocity.magnitude < 0.001)
 	    {
             FindObjectOfType<Grid>().ForeceGrid();
 	        IsMoved = false;

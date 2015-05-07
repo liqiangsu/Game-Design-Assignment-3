@@ -28,7 +28,15 @@ public class PieceTrigger : MonoBehaviour
             animator.SetBool("IsTriggered", true);
             Camera.main.GetComponent<FollowTarget>().Target = target.transform;
             target.GetComponent<Rigidbody>().useGravity = true;
+            Invoke("ReSetCamera", 2f);
         }
+    }
+
+    void ReSetCamera()
+    {
+        Camera.main.GetComponent<FollowTarget>().Target = GameObject.FindGameObjectWithTag("Player").transform;
+        GameObject.Find("SavePoint").GetComponent<SaveHelper>().Save();
+        Destroy(this);
     }
 
     
