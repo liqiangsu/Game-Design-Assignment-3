@@ -5,7 +5,7 @@ using System.Collections;
 public class RuneCompleteChecker : MonoBehaviour
 {
 
-    [SerializeField] public Transform[] Runes;
+    [SerializeField] private Transform[] Runes;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,19 +14,32 @@ public class RuneCompleteChecker : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    IsConnected();
+	    if (IsConnected())
+	    {
+            var boss = GameObject.Find("Boss");
+            var cameraController = Camera.main.gameObject.GetComponent<FollowTarget>();
+            cameraController.Target = boss.transform;
+	        cameraController.Distance = 10;
+            boss.transform.FindChild("DestoryAnimation").gameObject.SetActive(true);
+            Invoke("LoadLevel2", 3);
+	    }
 	}
 
-    void IsConnected()
+    bool IsConnected()
     {
+        //check completed
+        //TODO: could be using better method
         float totalDistance = 0;
         for (int i = 0; i < Runes.Length-1; i++)
         {
             totalDistance += Vector3.Distance(Runes[i].position, Runes[i + 1].position);
         }
-        if (totalDistance <= 3.5)
-        {
-            Debug.Log("completed");
-        }
+
+        return totalDistance <= 3.5;
+    }
+
+    void LoadLevel2()
+    {
+        Application.LoadLevel("Level2");
     }
 }

@@ -25937,7 +25937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1934018901
 Transform:
   m_ObjectHideFlags: 0
@@ -26588,6 +26588,7 @@ Transform:
   - {fileID: 1002969178}
   - {fileID: 295819499}
   - {fileID: 855813051}
+  - {fileID: 1729182519}
   - {fileID: 1469459713}
   - {fileID: 1447925221}
   - {fileID: 1886890161}
@@ -26638,7 +26639,6 @@ Transform:
   - {fileID: 1408328710}
   - {fileID: 64008060}
   - {fileID: 1788606277}
-  - {fileID: 1729182519}
   - {fileID: 2116573394}
   - {fileID: 1440782497}
   - {fileID: 975931316}

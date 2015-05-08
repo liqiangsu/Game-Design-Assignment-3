@@ -25,7 +25,7 @@ public class SaveHelper : MonoBehaviour {
     List<SmoothMoveJob> MoveJobs = new List<SmoothMoveJob>();
 	// Use this for initialization
 	void Start () {
-	
+	    Save();
 	}
 	
 	// Update is called once per frame

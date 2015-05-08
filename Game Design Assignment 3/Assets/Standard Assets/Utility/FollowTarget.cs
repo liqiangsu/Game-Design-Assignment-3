@@ -9,10 +9,10 @@ public class FollowTarget : MonoBehaviour
     public Transform Target;
     // The distance in the x-z plane to the target
     [SerializeField]
-    private float distance = 10.0f;
+    public float Distance = 10.0f;
     // the height we want the camera to be above the target
     [SerializeField]
-    private float height = 5.0f;
+    public float Height = 5.0f;
 
     [SerializeField]
     private float rotationDamping;
@@ -31,7 +31,7 @@ public class FollowTarget : MonoBehaviour
 
         // Calculate the current rotation angles
         var wantedRotationAngle = Target.eulerAngles.y;
-        var wantedHeight = Target.position.y + height;
+        var wantedHeight = Target.position.y + Height;
 
         var currentRotationAngle = transform.eulerAngles.y;
         var currentHeight = transform.position.y;
@@ -48,7 +48,7 @@ public class FollowTarget : MonoBehaviour
         // Set the position of the camera on the x-z plane to:
         // distance meters behind the target
         transform.position = Target.position;
-        transform.position -= currentRotation * Vector3.forward * distance;
+        transform.position -= currentRotation * Vector3.forward * Distance;
 
         // Set the height of the camera
         transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
