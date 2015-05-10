@@ -6149,7 +6149,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .150000006
+      value: 7.1500001
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6209,11 +6209,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 435234, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 408336, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11493352, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: camera
@@ -6233,7 +6233,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11493352, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: RotatSpeed
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}

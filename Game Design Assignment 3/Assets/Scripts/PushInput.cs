@@ -22,7 +22,7 @@ public class PushInput : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
 	{
 	    IsPushState = Input.GetKeyDown(KeyCode.E);
 	    if (IsPushState)
@@ -70,6 +70,12 @@ public class PushInput : MonoBehaviour
         }
     }
     
+	private GameObject FindFacingCubeRayCast(){
+		RaycastHit hit;
+		Physics.Raycast (new Ray (transform.position, transform.forward), GrappingDistance, hit);
+	}
+
+
     private GameObject FindFacingCubes()
     {
         Vector3 position = transform.Find("PushCenter").transform.position;
