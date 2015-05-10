@@ -34,10 +34,10 @@ public class PushInput : MonoBehaviour
                 return;
             }
             lastPushTime = Time.time;
-            
 
 
-	        var closest = FindFacingCubes();
+
+            var closest = FindFacingCubeRayCast();
 	        if (closest == null)
 	        {
 	            return;
@@ -72,7 +72,12 @@ public class PushInput : MonoBehaviour
     
 	private GameObject FindFacingCubeRayCast(){
 		RaycastHit hit;
-		Physics.Raycast (new Ray (transform.position, transform.forward), GrappingDistance, hit);
+        var isHit = Physics.Raycast(new Ray(transform.position, transform.forward), out hit, GrappingDistance);
+	    if (isHit)
+	    {
+	        return hit.collider.gameObject;
+	    }
+	    return null;
 	}
 
 
