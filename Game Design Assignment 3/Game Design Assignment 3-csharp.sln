@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{ACB89F22-9B98-E263-5845-5F6D5C17EA46}") = "Game Design Assignment 3", "Assembly-CSharp-firstpass-vs.csproj", "{695F3961-1294-791C-06C0-20E3654ED33A}"
+EndProject
 Project("{ACB89F22-9B98-E263-5845-5F6D5C17EA46}") = "Game Design Assignment 3", "Assembly-CSharp-vs.csproj", "{1E6FCEE1-D02E-3F8F-9847-B59C9422B24A}"
 EndProject
 Project("{ACB89F22-9B98-E263-5845-5F6D5C17EA46}") = "Game Design Assignment 3", "Assembly-CSharp-Editor-vs.csproj", "{676C9B2E-C085-105A-25DA-D887A26FF0D7}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{695F3961-1294-791C-06C0-20E3654ED33A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{695F3961-1294-791C-06C0-20E3654ED33A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{695F3961-1294-791C-06C0-20E3654ED33A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{695F3961-1294-791C-06C0-20E3654ED33A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E6FCEE1-D02E-3F8F-9847-B59C9422B24A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1E6FCEE1-D02E-3F8F-9847-B59C9422B24A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E6FCEE1-D02E-3F8F-9847-B59C9422B24A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																									GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

@@ -46,31 +46,44 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CloudsToy\Editor\CloudsToyEditor.cs" />
+     <Compile Include="Assets\Editor\InspectorLockToggle.cs" />
+     <Compile Include="Assets\Editor\ReplaceGameObjects.cs" />
+     <Compile Include="Assets\Editor\unity SetPivot.cs" />
      <Compile Include="Assets\TSF\Editor\TSF.cs" />
+     <None Include="Assets\CloudsToy\Shaders\CloudBright.shader" />
+     <None Include="Assets\Shaders\Black.shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
      <None Include="Assets\ShaderForge\Readme.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
-     <None Include="Assets\uIntelliSense\Editor\Resources\uintellisense-data.xml" />
      <None Include="Assets\Resources\Level1.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Refraction.shader" />
+     <None Include="Assets\PrimitivePlus\Documentation\ReadMe.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Parallax.shader" />
-     <None Include="Assets\uIntelliSense\LICENSE.txt" />
      <None Include="Assets\TSF\Shaders\TSFOutline.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightWrapping.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\TSF\Shaders\TSF.shader" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
-     <None Include="Assets\TSFOutline.shader" />
+     <None Include="Assets\Shaders\TSFOutline.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\TessellationDisplacement.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Tiles.shader" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
+     <None Include="Assets\CloudsToy\Shaders\CloudRealistic.shader" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Resources\test.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Cloudstoyv5">
+ <HintPath>D:/Documents/Unity Project/Game-Design-Assignment-3/Game Design Assignment 3/Assets/CloudsToy/DLL/Cloudstoyv5.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -106,6 +119,8 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{695F3961-1294-791C-06C0-20E3654ED33A}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{A6AC6939-F837-F6C8-A0A7-0F5CF9DE9E89}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{1E6FCEE1-D02E-3F8F-9847-B59C9422B24A}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>

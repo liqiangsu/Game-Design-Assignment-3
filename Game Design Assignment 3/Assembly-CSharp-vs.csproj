@@ -46,45 +46,73 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Cube.cs" />
-     <Compile Include="Assets\ExtraCharaterController.cs" />
-     <Compile Include="Assets\MapIconHightlightAnimator.cs" />
-     <Compile Include="Assets\MapIconOnClick.cs" />
-     <Compile Include="Assets\MapRainParticleControler.cs" />
-     <Compile Include="Assets\PushInput.cs" />
+     <Compile Include="Assets\PrimitivePlus\Scripts\PrimitivePlusEditor.cs" />
+     <Compile Include="Assets\Scripts\BossLevel1.cs" />
+     <Compile Include="Assets\Scripts\BossLevel1EnterDetector.cs" />
+     <Compile Include="Assets\Scripts\CameraShake.cs" />
+     <Compile Include="Assets\Scripts\ChangeColorByPlayerDistance.cs" />
+     <Compile Include="Assets\Scripts\Collectable.cs" />
+     <Compile Include="Assets\Scripts\CollectionManager.cs" />
+     <Compile Include="Assets\Scripts\Cube.cs" />
+     <Compile Include="Assets\Scripts\Die.cs" />
+     <Compile Include="Assets\Scripts\DieOnFire.cs" />
      <Compile Include="Assets\Scripts\ExitGridCell.cs" />
+     <Compile Include="Assets\Scripts\ExtraCharaterController.cs" />
      <Compile Include="Assets\Scripts\Grid.cs" />
-     <Compile Include="Assets\Scripts\ResetGridCell.cs" />
+     <Compile Include="Assets\Scripts\MapIconHightlightAnimator.cs" />
+     <Compile Include="Assets\Scripts\MapIconOnClick.cs" />
+     <Compile Include="Assets\Scripts\MoveBetweeen.cs" />
+     <Compile Include="Assets\Scripts\PieceTrigger.cs" />
+     <Compile Include="Assets\Scripts\PushInput.cs" />
+     <Compile Include="Assets\Scripts\RandomiseAnimationStartTime.cs" />
+     <Compile Include="Assets\Scripts\RemoveTrgger.cs" />
+     <Compile Include="Assets\Scripts\ResetTrigger.cs" />
+     <Compile Include="Assets\Scripts\RuneCompleteChecker.cs" />
+     <Compile Include="Assets\Scripts\SaveHelper.cs" />
+     <Compile Include="Assets\Scripts\ThirdPersonCharacter.cs" />
+     <Compile Include="Assets\Scripts\ThirdPersonUserControl.cs" />
+     <Compile Include="Assets\Scripts\TimerMovingGround.cs" />
+     <Compile Include="Assets\Scripts\TransparentCube.cs" />
      <Compile Include="Assets\Scripts\UI\ExitButton.cs" />
      <Compile Include="Assets\Scripts\UI\RestartButton.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
-     <Compile Include="Assets\ThirdPersonCharacter.cs" />
-     <Compile Include="Assets\ThirdPersonUserControl.cs" />
+     <None Include="Assets\CloudsToy\Shaders\CloudBright.shader" />
+     <None Include="Assets\Shaders\Black.shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
      <None Include="Assets\ShaderForge\Readme.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
-     <None Include="Assets\uIntelliSense\Editor\Resources\uintellisense-data.xml" />
      <None Include="Assets\Resources\Level1.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Refraction.shader" />
+     <None Include="Assets\PrimitivePlus\Documentation\ReadMe.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Parallax.shader" />
-     <None Include="Assets\uIntelliSense\LICENSE.txt" />
      <None Include="Assets\TSF\Shaders\TSFOutline.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightWrapping.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\TSF\Shaders\TSF.shader" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
-     <None Include="Assets\TSFOutline.shader" />
+     <None Include="Assets\Shaders\TSFOutline.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\TessellationDisplacement.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Tiles.shader" />
+     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
+     <None Include="Assets\CloudsToy\Shaders\CloudRealistic.shader" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Resources\test.txt" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>D:/Documents/Unity Project/Game-Design-Assignment-3/Game Design Assignment 3/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Cloudstoyv5">
+ <HintPath>D:/Documents/Unity Project/Game-Design-Assignment-3/Game Design Assignment 3/Assets/CloudsToy/DLL/Cloudstoyv5.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
