@@ -6,6 +6,8 @@ public class Cube : MonoBehaviour
     private bool IsMoved;
 
     private Vector3 targetPosition;
+
+	private Vector3 pushDir;
 	// Use this for initialization
 	void Start ()
 	{
@@ -18,14 +20,17 @@ public class Cube : MonoBehaviour
 	        GetComponent<Rigidbody>().MovePosition(
                         Vector3.MoveTowards(transform.position, targetPosition,
 	                    speed*Time.deltaTime));
-	    }
 
-	    if (transform.position == targetPosition)
+			//transform.position += pushDir;
+			//GetComponent<Rigidbody>().AddForce(pushDir * speed);
+		}
+
+	    if (IsMoved && transform.position.Equals2D(targetPosition))
 	    {
+			GameObject.Find("Grid").GetComponent<Grid>().ForeceGrid();
 	        IsMoved = false;
 	    }
 	}
-
     public void Move(Vector3 dir)
     {
         RaycastHit hit;
@@ -36,6 +41,7 @@ public class Cube : MonoBehaviour
         {
             targetPosition = transform.position + dir * 1;
             IsMoved = true;
+			pushDir = dir;
         }
     }
 }
