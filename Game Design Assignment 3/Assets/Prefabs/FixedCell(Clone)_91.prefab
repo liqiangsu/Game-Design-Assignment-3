@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11498856}
   m_Layer: 0
   m_Name: FixedCell(Clone)_91
-  m_TagString: Untagged
+  m_TagString: WallCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Cube : MonoBehaviour
 {
-
+    public float speed = 1;
     private bool IsMoved;
+
+    private Vector3 targetPosition;
 	// Use this for initialization
 	void Start ()
 	{
@@ -12,14 +13,29 @@ public class Cube : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-	    if (GetComponent<Rigidbody>().velocity.magnitude >= 1)
+	    if (IsMoved)
 	    {
-	        IsMoved = true;
+	        GetComponent<Rigidbody>().MovePosition(
+                        Vector3.MoveTowards(transform.position, targetPosition,
+	                    speed*Time.deltaTime));
 	    }
-	    if (IsMoved && GetComponent<Rigidbody>().velocity.magnitude < 0.001)
+
+	    if (transform.position == targetPosition)
 	    {
-            FindObjectOfType<Grid>().ForeceGrid();
 	        IsMoved = false;
 	    }
 	}
+
+    public void Move(Vector3 dir)
+    {
+        RaycastHit hit;
+        //test pushing direction and upward direction if anything blocked
+        var isHit = Physics.Raycast(new Ray(transform.position, dir), out hit, 1f) ||
+                    Physics.Raycast(new Ray(transform.position, transform.up), out hit, 1f);
+        if (!isHit)
+        {
+            targetPosition = transform.position + dir * 1;
+            IsMoved = true;
+        }
+    }
 }

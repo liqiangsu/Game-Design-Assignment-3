@@ -11,6 +11,7 @@ public class Grid : MonoBehaviour
 	void Start ()
 	{
 	    ForeceGrid();
+        ForeceGrid("WallCube");
         ForeceGrid("GridCell");
 	}
 	
@@ -26,6 +27,7 @@ public class Grid : MonoBehaviour
         {
             Vector3 oldPos = cube.transform.position;
             Vector3 newPos = new Vector3(Mathf.RoundToInt(oldPos.x / GridSize) * GridSize, oldPos.y, Mathf.RoundToInt(oldPos.z / GridSize) * GridSize);
+
             cube.transform.position = newPos;
         }
     }
