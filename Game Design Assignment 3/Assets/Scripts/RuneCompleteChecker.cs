@@ -19,7 +19,6 @@ public class RuneCompleteChecker : MonoBehaviour
             var boss = GameObject.Find("Boss");
             var cameraController = Camera.main.gameObject.GetComponent<FollowTarget>();
             cameraController.Target = boss.transform;
-	        cameraController.Distance = 10;
             boss.transform.FindChild("DestoryAnimation").gameObject.SetActive(true);
             Invoke("LoadLevel2", 3);
 	    }

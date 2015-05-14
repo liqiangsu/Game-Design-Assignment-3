@@ -7,13 +7,12 @@ using UnityStandardAssets.Utility;
 public class PieceTrigger : MonoBehaviour
 {
 
-    private Animator animator;
-    [SerializeField] private GameObject target;
-    [SerializeField] private GameObject _camera;
+    [SerializeField] private Material Deactive;
+    [SerializeField] private Material Active;
+    private bool isActivatied = false;
 	// Use this for initialization
 	void Start ()
 	{
-	    animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -23,21 +22,11 @@ public class PieceTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isActivatied)
         {
-            animator.SetBool("IsTriggered", true);
-            Camera.main.GetComponent<FollowTarget>().Target = target.transform;
-            target.GetComponent<Rigidbody>().useGravity = true;
-            Invoke("ReSetCamera", 2f);
+            GetComponent<Renderer>().material = Active;
+            GameObject.FindObjectOfType<SaveHelper>().Save();
+            isActivatied = true;
         }
     }
-
-    void ReSetCamera()
-    {
-        Camera.main.GetComponent<FollowTarget>().Target = GameObject.FindGameObjectWithTag("Player").transform;
-        GameObject.Find("SavePoint").GetComponent<SaveHelper>().Save();
-        Destroy(this);
-    }
-
-    
 }

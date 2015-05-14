@@ -18,7 +18,7 @@ public class SaveHelper : MonoBehaviour {
         public Vector3 Start;
         public Vector3 End;
         public float StartTime;
-        public float Speed = 3;
+        public float Speed = 2;
     }
     Dictionary<GameObject, SimpleTransform> lastSave;
 
@@ -120,7 +120,7 @@ public class SaveHelper : MonoBehaviour {
         }
     }
 
-    public static void SaveCompletedLevel(string levelName)
+    public void SaveCompletedLevel(string levelName)
     {
         using (
             FileStream fs = File.Open(Application.persistentDataPath + "/level.sav",
@@ -131,7 +131,7 @@ public class SaveHelper : MonoBehaviour {
         }
     }
 
-    public static string[] LoadCompletedlevel()
+    public string[] LoadCompletedlevel()
     {
         using (
             FileStream fs = File.Open(Application.persistentDataPath + "/level.sav", FileMode.Open)

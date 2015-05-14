@@ -71,7 +71,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 
 			ScaleCapsuleForCrouching(crouch);
-			PreventStandingInLowHeadroom();
+			//PreventStandingInLowHeadroom();
 
 			// send input and other state parameters to the animator
 			UpdateAnimator(move);
@@ -91,10 +91,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			{
 				Ray crouchRay = new Ray(m_Rigidbody.position + Vector3.up * m_Capsule.radius * k_Half, Vector3.up);
 				float crouchRayLength = m_CapsuleHeight - m_Capsule.radius * k_Half;
-				if (Physics.SphereCast(crouchRay, m_Capsule.radius * k_Half, crouchRayLength))
+			    RaycastHit hitInfo;
+				if (Physics.SphereCast(crouchRay, m_Capsule.radius * k_Half, out hitInfo ,crouchRayLength))
 				{
-					m_Crouching = true;
-					return;
+				    if (!hitInfo.collider.isTrigger)
+				    {
+                        m_Crouching = true;
+                        return;   
+				    }
 				}
 				m_Capsule.height = m_CapsuleHeight;
 				m_Capsule.center = m_CapsuleCenter;
@@ -212,15 +216,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// it is also good to note that the transform position in the sample assets is at the base of the character
 			if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
 			{
-				m_GroundNormal = hitInfo.normal;
-				m_IsGrounded = true;
-				m_Animator.applyRootMotion = true;
+				    m_GroundNormal = hitInfo.normal;
+				    m_IsGrounded = true;
+				    m_Animator.applyRootMotion = true;
+
 			}
 			else
 			{
-				m_IsGrounded = false;
-				m_GroundNormal = Vector3.up;
-				m_Animator.applyRootMotion = false;
+			    m_IsGrounded = false;
+			    m_GroundNormal = Vector3.up;
+			    m_Animator.applyRootMotion = false;
 			}
 		}
 	}

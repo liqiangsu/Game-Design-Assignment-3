@@ -7,7 +7,7 @@ public class ResetTrigger: MonoBehaviour
 
     void Start()
     {
-        save = GameObject.Find("SavePoint").GetComponent<SaveHelper>();
+        save = GameObject.FindObjectOfType<SaveHelper>();
     }
     void Update()
     {

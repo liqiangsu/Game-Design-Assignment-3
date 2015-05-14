@@ -37,7 +37,7 @@ public class Cube : MonoBehaviour
         //test pushing direction and upward direction if anything blocked
         var isHit = Physics.Raycast(new Ray(transform.position, dir), out hit, 1f) ||
                     Physics.Raycast(new Ray(transform.position, transform.up), out hit, 1f);
-        if (!isHit)
+        if (!isHit || (isHit && hit.collider.isTrigger))
         {
             targetPosition = transform.position + dir * 1;
             IsMoved = true;
