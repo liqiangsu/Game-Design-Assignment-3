@@ -35,7 +35,7 @@ public class Collectable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             CollectionManager.MagicCount++;
-            Destroy(gameObject);
+			Destroy(this.gameObject);
         }
     }
 }

@@ -18,7 +18,7 @@ public class DieOnFire : MonoBehaviour {
         Debug.Log(other.tag);
         if (other.CompareTag("DamagingParticle"))
         {
-            Destroy(this.gameObject);
+			FindObjectOfType<SaveHelper>().Load();
         }
     }
 }

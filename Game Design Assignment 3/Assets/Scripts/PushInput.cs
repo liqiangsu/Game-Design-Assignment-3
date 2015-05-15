@@ -11,7 +11,6 @@ public class PushInput : MonoBehaviour
 {
     public bool IsPushState;
     public float GrappingDistance;
-    public GameObject GrappedGameObject;
     public float GrappingAngle;
     public float PushForce = 5;
 
@@ -24,7 +23,7 @@ public class PushInput : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-	    IsPushState = Input.GetKeyDown(KeyCode.E);
+		IsPushState = Input.GetButtonDown("Push");
 	    if (IsPushState)
 	    {
             // do nothing when last push is too quick
@@ -34,43 +33,34 @@ public class PushInput : MonoBehaviour
                 return;
             }
             lastPushTime = Time.time;
-
-
-
             var closest = FindFacingCubeRayCast();
 	        if (closest == null)
 	        {
 	            return;
 	        }
-            //debug
-	        if (GrappedGameObject == null)
-	        {
-	            GrappedGameObject = closest;
-	        }
+
+			if(!IsPlayerOnSide()){
+				return;
+			}
 	        var normal = this.transform.forward;
             var dir = Mathf.Abs(normal.x) > Mathf.Abs(normal.z) ? new Vector3(normal.x < 0? -1 : 1, 0, 0) : new Vector3(0, 0, normal.z < 0 ? -1: 1);
             //closest.GetComponent<Rigidbody>().velocity = dir * PushForce;
             closest.GetComponent<Cube>().Move(dir);
-	    }else
-	    {
-	        GrappedGameObject = null;
 	    }
 	}
+	
+	private bool IsPlayerOnSide(){
+		//0.5 should be half of the cube size
+		var minX = transform.position.x - 0.5f;
+		var minZ = transform.position.z - 0.5f;
+		var maxX = transform.position.x + 0.5f;
+		var maxZ = transform.position.z + 0.5f;
 
-    private GameObject FindClosestCube(GameObject[] gameObjects)
-    {
-        try
-        {
-            return gameObjects.OrderBy(o => (Vector3.Distance(o.transform.position, this.transform.position))).First();
+		var playerPosition = GameObject.FindGameObjectWithTag ("Player").transform.position;
+		return (playerPosition.x > minX && playerPosition.x < maxX) || 
+			(playerPosition.z > minZ && playerPosition.z < maxZ);
 
-        }
-        catch (Exception)
-        {
-            
-            return null;
-        }
-    }
-    
+	}
 	private GameObject FindFacingCubeRayCast(){
 		RaycastHit hit;
         var isHit = Physics.Raycast(new Ray(transform.position, transform.forward), out hit, GrappingDistance);
@@ -81,29 +71,4 @@ public class PushInput : MonoBehaviour
 	    return null;
 	}
 
-
-    private GameObject FindFacingCubes()
-    {
-        Vector3 position = transform.Find("PushCenter").transform.position;
-        var obs = GameObject.FindGameObjectsWithTag("Cube").ToList();
-        var objectsInRange =
-            obs.Where(o => Vector3.Distance(o.transform.position, position) < GrappingDistance);
-
-        if (!objectsInRange.Any())
-        {
-            return null;
-        }
-        var objectsInView = objectsInRange.Where(o => (Vector3.Angle((o.transform.position - position), this.transform.forward) < GrappingAngle));
-
-        if (!objectsInView.Any() || !objectsInRange.Any())
-        {
-            return null;
-        }
-
-        var nearestObject = objectsInRange.OrderBy(o => (Vector3.Distance(o.transform.position, position))).First();
-
-        var mostDirectViewingObject = objectsInView.OrderBy(o => (Vector3.Angle((o.transform.position - position), this.transform.forward))).First();
-
-        return nearestObject != mostDirectViewingObject ? null : nearestObject;
-    }
 }

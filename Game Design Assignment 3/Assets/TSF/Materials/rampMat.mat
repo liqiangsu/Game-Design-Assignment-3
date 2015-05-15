@@ -35,6 +35,10 @@ Material:
         second: .5
       data:
         first:
+          name: _Outline
+        second: .00999999978
+      data:
+        first:
           name: _Cull
         second: 2
       data:
@@ -56,15 +60,11 @@ Material:
       data:
         first:
           name: _Brightness
-        second: .790000021
+        second: 12.8500004
       data:
         first:
           name: _DS
         second: 0
-      data:
-        first:
-          name: _Outline
-        second: .00999999978
       data:
         first:
           name: _Asym
