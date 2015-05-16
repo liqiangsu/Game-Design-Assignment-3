@@ -20,18 +20,11 @@ public class Cube : MonoBehaviour
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-	    if (gameObject.name == "Cube 29")
-	    {
-	        Debug.Log(gameObject.transform.position);
-	    }
 	    if (IsMoved)
 	    {
 	        GetComponent<Rigidbody>().MovePosition(
                         Vector3.MoveTowards(transform.position, targetPosition,
 	                    speed*Time.deltaTime));
-
-			//transform.position += pushDir;
-			//GetComponent<Rigidbody>().AddForce(pushDir * speed);
 		}
 
 	    if (IsMoved && transform.position.Equals2D(targetPosition))
@@ -46,7 +39,7 @@ public class Cube : MonoBehaviour
         //test pushing direction and upward direction if anything blocked
         var isHit = Physics.Raycast(new Ray(transform.position, dir), out hit, 1f) ||
                     Physics.Raycast(new Ray(transform.position, transform.up), out hit, 1f);
-        if (!isHit || (isHit && hit.collider.gameObject.CompareTag("PutOnTrigger")))
+        if (!isHit || hit.collider.gameObject.CompareTag("PutOnTrigger"))
         {
             targetPosition = transform.position + dir * 1;
             IsMoved = true;
