@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using UnityEditor.Sprites;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -40,36 +41,39 @@ public class SaveHelper : MonoBehaviour {
             Load();
             Debug.Log("Loaded");
         }
+	}
 
-	    foreach (var job in MoveJobs)
-	    {
-	        var timeSicneStart = Time.time - job.StartTime;
-	        var percentage = timeSicneStart * job.Speed;
-	        job.GameObject.transform.position = Vector3.Lerp(job.Start, job.End, percentage);
-	    }
+    void FixedUpdate()
+    {
+        foreach (var job in MoveJobs)
+        {
+            var timeSicneStart = Time.time - job.StartTime;
+            var percentage = timeSicneStart * job.Speed;
+            job.GameObject.transform.position = Vector3.Lerp(job.Start, job.End, percentage);
+        }
         if (MoveJobs.Count > 0)
         {
             //when back to saved position, re-enable collider
             MoveJobs.Where(o => o.GameObject.transform.position == o.End).ToList().ForEach(
                 (o) =>
+                {
+                    var theRigibody = o.GameObject.GetComponent<Rigidbody>();
+                    if (theRigibody)
                     {
-                        var theCollider = o.GameObject.GetComponent<Collider>();
-                        if (theCollider)
+                        if (theRigibody.position != o.End)
                         {
-                            theCollider.enabled = true;
+                            Debug.Log("rher");
                         }
-                        var theRigibody = o.GameObject.GetComponent<Rigidbody>();
-                        if (theRigibody)
-                        {
-                            theRigibody.useGravity = true;
-                        }
-
+                        //reset collision detection and velocity;
+                        theRigibody.detectCollisions = true;
+                        theRigibody.velocity = Vector3.zero;
                     }
-                );
-	        MoveJobs.RemoveAll(o => o.GameObject.transform.position == o.End);
-        }
-	}
 
+                }
+                );
+            MoveJobs.RemoveAll(o => o.GameObject.transform.position == o.End);
+        }
+    }
     public void Save()
     {
         var gos = GameObject.FindObjectsOfType<GameObject>();
@@ -103,16 +107,16 @@ public class SaveHelper : MonoBehaviour {
                     entry.Key.transform.rotation = entry.Value.Quaternation;
                     
                     //disable collider to prepare for strigh movement back to saved position.
-                    var theCollider = entry.Key.GetComponent<Collider>();
+
                     var theRigibody = entry.Key.GetComponent<Rigidbody>();
-                    if (theCollider)
-                    {
-                        theCollider.enabled = false;
-                    }
+
                     if (theRigibody)
                     {
-                        theRigibody.useGravity = false;
+                        theRigibody.detectCollisions = false;
+                        //theRigibody.position = entry.Value.Position;
                     }
+
+
                     MoveJobs.Add(new SmoothMoveJob(){GameObject = entry.Key, Start = entry.Key.transform.position, End = entry.Value.Position, StartTime = Time.time});
                     entry.Key.transform.localScale = entry.Value.Scale;
                 }

@@ -8,13 +8,22 @@ public class Cube : MonoBehaviour
     private Vector3 targetPosition;
 
 	private Vector3 pushDir;
+
+    private GameObject grid;
+    private Rigidbody rigi;
 	// Use this for initialization
 	void Start ()
 	{
+	    grid = GameObject.Find("Grid");
+	    rigi = this.GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+	    if (gameObject.name == "Cube 29")
+	    {
+	        Debug.Log(gameObject.transform.position);
+	    }
 	    if (IsMoved)
 	    {
 	        GetComponent<Rigidbody>().MovePosition(
@@ -27,7 +36,7 @@ public class Cube : MonoBehaviour
 
 	    if (IsMoved && transform.position.Equals2D(targetPosition))
 	    {
-			GameObject.Find("Grid").GetComponent<Grid>().ForeceGrid();
+			grid.GetComponent<Grid>().ForeceGrid();
 	        IsMoved = false;
 	    }
 	}
@@ -37,7 +46,7 @@ public class Cube : MonoBehaviour
         //test pushing direction and upward direction if anything blocked
         var isHit = Physics.Raycast(new Ray(transform.position, dir), out hit, 1f) ||
                     Physics.Raycast(new Ray(transform.position, transform.up), out hit, 1f);
-        if (!isHit || (isHit && hit.collider.isTrigger))
+        if (!isHit || (isHit && hit.collider.gameObject.CompareTag("PutOnTrigger")))
         {
             targetPosition = transform.position + dir * 1;
             IsMoved = true;

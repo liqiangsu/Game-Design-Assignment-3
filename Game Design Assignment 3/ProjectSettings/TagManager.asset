@@ -8,6 +8,7 @@ TagManager:
   - GridCell
   - DamagingParticle
   - WallCube
+  - PutOnTrigger
   layers:
   - Default
   - TransparentFX

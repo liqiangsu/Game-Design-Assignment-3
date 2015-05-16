@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using System.Collections;
 
@@ -6,9 +7,12 @@ public class RuneCompleteChecker : MonoBehaviour
 {
 
     [SerializeField] private Transform[] Runes;
+    private GameObject boss;
+    private FollowTarget cameraController;
 	// Use this for initialization
 	void Start () {
-	
+        boss = GameObject.Find("Boss");
+        cameraController = Camera.main.gameObject.GetComponent<FollowTarget>();
 	}
 	
 	// Update is called once per frame
@@ -16,8 +20,6 @@ public class RuneCompleteChecker : MonoBehaviour
 	{
 	    if (IsConnected())
 	    {
-            var boss = GameObject.Find("Boss");
-            var cameraController = Camera.main.gameObject.GetComponent<FollowTarget>();
             cameraController.Target = boss.transform;
             boss.transform.FindChild("DestoryAnimation").gameObject.SetActive(true);
             Invoke("LoadLevel2", 3);
