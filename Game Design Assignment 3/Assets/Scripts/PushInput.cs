@@ -44,7 +44,6 @@ public class PushInput : MonoBehaviour
 				return;
 			}
 	        var dir = GetPushingDirection(closest);
-            //closest.GetComponent<Rigidbody>().velocity = dir * PushForce;
             closest.GetComponent<Cube>().Move(dir);
 	    }
 	}
@@ -57,31 +56,10 @@ public class PushInput : MonoBehaviour
         var maxZ = box.transform.position.z + 0.5f;
         // player position 
         var pp = player.transform.position;
-                
-        //up
-        if (pp.z > maxZ)
-        {
-            return new Vector3(0,0,-1);
-        }
-        //down
-        if (pp.z < minZ)
-        {
-            return new Vector3(0,0,1);
-        }
-        //left
-        if (pp.x < minX)
-        {
-            return new Vector3(1,0,0);
-        }
-        //right
-        if (pp.x > maxX)
-        {
-            return new Vector3(-1, 0, 0);
-        }
-        return Vector3.zero;
-//        var normal = this.transform.forward;
-//
-//        return Mathf.Abs(normal.x) > Mathf.Abs(normal.z) ? new Vector3(normal.x < 0 ? -1 : 1, 0, 0) : new Vector3(0, 0, normal.z < 0 ? -1 : 1);
+        return new Vector3(
+                            pp.x < minX ? 1 : pp.x > maxX ? -1 : 0, 
+                            0,
+                            pp.z < minZ ? 1 : pp.z > maxZ ? -1 : 0);
     }
 	private bool IsPlayerOnSide(GameObject box){
 		//0.5 should be half of the cube size
