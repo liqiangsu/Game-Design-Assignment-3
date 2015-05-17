@@ -14,11 +14,13 @@ public class PushInput : MonoBehaviour
     public float GrappingAngle;
     public float PushForce = 5;
     private GameObject player;
+    private Transform pushCenter;
     private float lastPushTime = 0;
 	// Use this for initialization
 	void Start ()
 	{
 	    player = GameObject.FindGameObjectWithTag("Player");
+        pushCenter = player.transform.FindChild("PushCenter");
 	}
 	
 	// Update is called once per frame
@@ -75,7 +77,7 @@ public class PushInput : MonoBehaviour
 	}
 	private GameObject FindFacingCubeRayCast(){
 		RaycastHit hit;
-        var isHit = Physics.Raycast(new Ray(transform.position, transform.forward), out hit, GrappingDistance);
+        var isHit = Physics.Raycast(new Ray(pushCenter.position, transform.forward), out hit, GrappingDistance);
 	    if (isHit)
 	    {
             if (hit.collider.CompareTag("Cube")) { 

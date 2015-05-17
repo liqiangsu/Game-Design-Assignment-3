@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2333648}
   - 114: {fileID: 11485620}
   - 54: {fileID: 5401088}
+  - 95: {fileID: 9566878}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Cube
@@ -90,6 +91,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &9566878
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140010}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2a07ad6a6e5984241b79c1d852c8590e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11485620
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -20,7 +20,7 @@ public class RemoveTrgger : MonoBehaviour
     private string[] triggeringTags = { "player" };
     private bool isTriggered = false;
     // Use this for initialization
-    void Start()
+    protected void Start()
     {
         if (targetPosition == Vector3.zero)
         {
@@ -29,7 +29,7 @@ public class RemoveTrgger : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         if (isTriggered && IsEnabled)
         {
@@ -67,7 +67,7 @@ public class RemoveTrgger : MonoBehaviour
     }
 
 
-    void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         if (triggeringTags.Contains(other.gameObject.tag))
         {
@@ -77,6 +77,6 @@ public class RemoveTrgger : MonoBehaviour
 
     void DestoryObject()
     {
-        Destroy(RemovingObject);
+        RemovingObject.transform.position = Extesions.BlackHole;
     }
 }

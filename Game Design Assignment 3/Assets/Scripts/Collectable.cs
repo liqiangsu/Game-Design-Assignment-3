@@ -16,19 +16,19 @@ public class Collectable : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-	    if (IsPlayerNearBy())
-	    {
-	        transform.position = Vector3.MoveTowards(transform.position, Player.transform.FindChild("PushCenter").position,
-	            MagnetSpeed*Time.deltaTime);
-	    }
-	}
-
-    bool IsPlayerNearBy()
-    {
-        var distance = Vector3.Distance(transform.position, Player.transform.position);
-        return distance < MagnetDistance;
-    }
+//	void FixedUpdate () {
+//	    if (IsPlayerNearBy())
+//	    {
+//	        transform.position = Vector3.MoveTowards(transform.position, Player.transform.FindChild("PushCenter").position,
+//	            MagnetSpeed*Time.deltaTime);
+//	    }
+//	}
+//
+//    bool IsPlayerNearBy()
+//    {
+//        var distance = Vector3.Distance(transform.position, Player.transform.position);
+//        return distance < MagnetDistance;
+//    }
 
     void OnTriggerEnter(Collider other)
     {

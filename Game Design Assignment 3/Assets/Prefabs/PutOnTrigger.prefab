@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3344850}
   - 23: {fileID: 2331234}
   - 65: {fileID: 6571944}
-  - 114: {fileID: 11418352}
+  - 114: {fileID: 11494924}
   m_Layer: 0
   m_Name: PutOnTrigger
   m_TagString: PutOnTrigger
@@ -74,7 +74,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .100000001, y: .100000001, z: .100000001}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11418352
+--- !u!114 &11494924
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 159234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6d726962a2f3e54aa81b41ffb18e3b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 21102cf0a3150204ca501374b9816660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RemovingObject: {fileID: 0}

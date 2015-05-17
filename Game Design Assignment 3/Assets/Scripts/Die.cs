@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets;
 
 public class Die : StateMachineBehaviour {
 
@@ -16,7 +17,8 @@ public class Die : StateMachineBehaviour {
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-	    //animator.gameObject.SetActive(false);
+        animator.SetBool("isVanish", false);
+	    animator.gameObject.transform.position = Extesions.BlackHole;
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
