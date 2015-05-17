@@ -14,9 +14,10 @@ GameObject:
   - 114: {fileID: 11476086}
   - 54: {fileID: 5425746}
   - 114: {fileID: 11428680}
+  - 114: {fileID: 11419262}
   m_Layer: 0
   m_Name: MovingCube
-  m_TagString: Cube
+  m_TagString: TrapWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +120,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .949999988, y: 1, z: .949999988}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11419262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7bf2073e2b6aec4c99a366ca590843c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11428680
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -78,7 +78,9 @@ public class PushInput : MonoBehaviour
         var isHit = Physics.Raycast(new Ray(transform.position, transform.forward), out hit, GrappingDistance);
 	    if (isHit)
 	    {
-	        return hit.collider.gameObject;
+            if (hit.collider.CompareTag("Cube")) { 
+	            return hit.collider.gameObject;
+            }
 	    }
 	    return null;
 	}

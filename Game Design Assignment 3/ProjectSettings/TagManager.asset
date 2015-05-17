@@ -9,6 +9,7 @@ TagManager:
   - DamagingParticle
   - WallCube
   - PutOnTrigger
+  - TrapWall
   layers:
   - Default
   - TransparentFX
