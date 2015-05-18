@@ -12,6 +12,8 @@ public class PutOnTrigger : RemoveTrgger {
         {
             var animator = other.gameObject.GetComponent<Animator>();
             animator.SetBool("isVanish", true);
+            var renderer = GetComponent<Renderer>();
+            renderer.material.color = new Color(0,0,0,0);
         }
     }
 }

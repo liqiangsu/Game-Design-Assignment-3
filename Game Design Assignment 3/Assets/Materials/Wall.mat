@@ -189,11 +189,11 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .607843161, g: .431372553, b: .137254909, a: 1}
+        second: {r: .665517271, g: .461947262, b: .0704665333, a: 1}
       data:
         first:
           name: _EmissionColorUI
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 1, g: .694117665, b: .105882354, a: 1}
       data:
         first:
           name: _OutlineColor
