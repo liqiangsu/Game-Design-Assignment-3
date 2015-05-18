@@ -103,10 +103,6 @@ Material:
         second: 0
       data:
         first:
-          name: _Outline
-        second: 1
-      data:
-        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -143,10 +139,6 @@ Material:
         second: 0
       data:
         first:
-          name: _Cull
-        second: 2
-      data:
-        first:
           name: _Outl
         second: 1
       data:
@@ -171,6 +163,14 @@ Material:
         second: 0
       data:
         first:
+          name: _Cull
+        second: 2
+      data:
+        first:
+          name: _Outline
+        second: 1
+      data:
+        first:
           name: _Asym
         second: 0
       data:
@@ -192,12 +192,12 @@ Material:
         second: {r: .607843161, g: .431372553, b: .137254909, a: 1}
       data:
         first:
-          name: _OutlineColor
-        second: {r: 0, g: 0, b: 0, a: 1}
-      data:
-        first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _OutlineColor
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Asymmetry

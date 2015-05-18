@@ -67,7 +67,7 @@ Material:
       data:
         first:
           name: _Exposure
-        second: 1
+        second: 1.5
       data:
         first:
           name: _Rotation
@@ -80,7 +80,7 @@ Material:
       data:
         first:
           name: _Tint
-        second: {r: .5, g: .5, b: .5, a: .5}
+        second: {r: 0, g: .414503127, b: .897058845, a: .501960814}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

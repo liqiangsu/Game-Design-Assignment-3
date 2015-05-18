@@ -45,14 +45,14 @@ public class BossLevel1 : MonoBehaviour
 	            Invoke("StopShakeSound", 1.5f);
 
                 //TODO: change size of fire, could use prefab instead
-	            var instance = Instantiate(FirePrefab, Player.transform.position, Quaternion.identity) as GameObject;
+	            var instance = Instantiate(FirePrefab, Player.transform.position + new Vector3(0,0.2f,0), Quaternion.identity) as GameObject;
                 if (instance)
                     instance.transform.localScale = new Vector3(2f, 0f, 2f);
 	            lastFiredTime = Time.time;
 	        }
             if (IsFireSmallEnabled && Time.time - lastSmallFireTime > SmallFireIntervalTime)
 	        {
-	            var instance = Instantiate(FirePrefab, Player.transform.position, Quaternion.identity) as GameObject;
+				var instance = Instantiate(FirePrefab, Player.transform.position + new Vector3(0,0.2f,0), Quaternion.identity) as GameObject;
 	            if(instance)
                     instance.transform.localScale = new Vector3(0.3f,0f,0.3f);
 	            lastSmallFireTime = Time.time;
