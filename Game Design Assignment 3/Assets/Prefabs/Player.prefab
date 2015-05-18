@@ -226,6 +226,7 @@ GameObject:
   - 114: {fileID: 11445962}
   - 114: {fileID: 11436406}
   - 114: {fileID: 11493352}
+  - 114: {fileID: 11489352}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1970,8 +1971,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.07999992, y: .0299999993, z: 14.3199997}
+  m_LocalRotation: {x: 0, y: -.685706854, z: 0, w: .727877796}
+  m_LocalPosition: {x: 2.0999999, y: .469999999, z: 28.6599998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 456196}
@@ -2481,7 +2482,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsPushState: 0
   GrappingDistance: 1.10000002
-  GrappedGameObject: {fileID: 0}
   GrappingAngle: 30
   PushForce: 5.30000019
 --- !u!114 &11445962
@@ -2493,6 +2493,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11489352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116982}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0dcb543175b04540abec84c23d2f6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11493352
@@ -2507,7 +2518,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumppingControlSpeed: 1
-  camera: {fileID: 0}
+  cameraTransform: {fileID: 0}
+  SmallMoveSpeed: .0299999993
+  RotatSpeed: 0
 --- !u!136 &13603354
 CapsuleCollider:
   m_ObjectHideFlags: 1

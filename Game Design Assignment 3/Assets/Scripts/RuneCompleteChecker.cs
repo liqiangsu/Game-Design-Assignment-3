@@ -1,18 +1,18 @@
 ﻿using System.Linq;
 using System.Runtime.InteropServices;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using System.Collections;
-
 public class RuneCompleteChecker : MonoBehaviour
 {
 
     [SerializeField] private Transform[] Runes;
     private GameObject boss;
-    private FollowTarget cameraController;
+    private Assets.Utility.SmoothFollow cameraController;
 	// Use this for initialization
 	void Start () {
         boss = GameObject.Find("Boss");
-        cameraController = Camera.main.gameObject.GetComponent<FollowTarget>();
+        cameraController = Camera.main.gameObject.GetComponent<Assets.Utility.SmoothFollow>();
 	}
 	
 	// Update is called once per frame

@@ -9,10 +9,13 @@ public class Collectable : MonoBehaviour
     private GameObject Player;
     [SerializeField] public float MagnetDistance = 1;
     [SerializeField] public float MagnetSpeed = 2;
+
+    private AudioSource audio;
 	// Use this for initialization
 	void Start ()
 	{
 	    Player = GameObject.FindGameObjectWithTag("Player");
+	    audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -35,6 +38,7 @@ public class Collectable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             CollectionManager.MagicCount++;
+            AudioSource.PlayClipAtPoint(audio.clip, transform.position, 1f);
 			Destroy(this.gameObject);
         }
     }

@@ -10,6 +10,7 @@ TagManager:
   - WallCube
   - PutOnTrigger
   - TrapWall
+  - TouchTrigger
   layers:
   - Default
   - TransparentFX

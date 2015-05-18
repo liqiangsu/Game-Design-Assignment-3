@@ -27,7 +27,12 @@ public class Grid : MonoBehaviour
         {
             Vector3 oldPos = cube.transform.position;
             Vector3 newPos = new Vector3(Mathf.RoundToInt(oldPos.x / GridSize) * GridSize, oldPos.y, Mathf.RoundToInt(oldPos.z / GridSize) * GridSize);
-
+            var rigi = cube.gameObject.GetComponent<Rigidbody>();
+            if (rigi)
+            {
+                rigi.velocity = Vector3.zero;
+                rigi.angularVelocity = Vector3.zero;
+            }
             cube.transform.position = newPos;
         }
     }

@@ -6,7 +6,7 @@ public class BossLevel1 : MonoBehaviour
 {
     //Mean to be modify by external triigers
     //BossLevel1EnterDetector for example
-    public bool PlayerInArea;
+    public bool IsPlayerInArea = false;
     
     public bool IsFireEnabled = false;
     public bool IsFireSmallEnabled = false;
@@ -19,26 +19,30 @@ public class BossLevel1 : MonoBehaviour
     public GameObject FirePrefab;
 
     private GameObject theCamera;
+    private AudioSource audio;
     // Use this for initialization
 	void Start ()
 	{
 	    Player = GameObject.FindGameObjectWithTag("Player");
 	    theCamera = Camera.main.gameObject;
+        audio = GetComponent<AudioSource>();
+
 	}
 
     void Change()
     {
         theCamera.GetComponent<FollowTarget>().Target = this.gameObject.transform;
-
     }
 	// Update is called once per frame
 	void Update () {
-	    if (PlayerInArea && Player)
+	    if (IsPlayerInArea && Player)
 	    {
 	        if (IsFireEnabled && Time.time - lastFiredTime > FireIntervelTime)
 	        {
                 //shake Camera
                 theCamera.GetComponent<CameraShake>().Shake();
+                audio.Play();
+	            Invoke("StopShakeSound", 1.5f);
 
                 //TODO: change size of fire, could use prefab instead
 	            var instance = Instantiate(FirePrefab, Player.transform.position, Quaternion.identity) as GameObject;
@@ -55,8 +59,26 @@ public class BossLevel1 : MonoBehaviour
 	        }
 	    }
 	}
-
-
+    void StopShakeSound()
+    {
+//        var volNow = audio.volume;
+//        while (audio.volume > 0)
+//        {
+//            volNow -=
+//                (Time.deltaTime
+//                   * 1f
+//                   / FADE_HOW_MANY_SECONDS);
+//
+//            if (volNow <= 0.0)
+//            {
+//                volNow = 0.0f;
+//            }
+//
+//            audio.volume = volNow;
+//            yield return false;
+//        }
+        audio.Stop();
+    }
     public void Die()
     {
         //animation should be deactive in editor

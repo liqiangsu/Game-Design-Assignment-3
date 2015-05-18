@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Runtime.InteropServices;
+using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class Cube : MonoBehaviour
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+	    if (name == "Cube 45")
+	    {
+	        //Debug.Log(GetComponent<Rigidbody>().velocity);
+	    }
 	    if (IsMoved)
 	    {
 	        GetComponent<Rigidbody>().MovePosition(
@@ -36,14 +41,20 @@ public class Cube : MonoBehaviour
     public void Move(Vector3 dir)
     {
         RaycastHit hit;
-        //test pushing direction and upward direction if anything blocked
-        var isHit = Physics.Raycast(new Ray(transform.position, dir), out hit, 1f) ||
-                    Physics.Raycast(new Ray(transform.position, transform.up), out hit, 1f);
-        if (!isHit || hit.collider.gameObject.CompareTag("PutOnTrigger"))
+        RaycastHit hitUp;
+        // make cube on top move to direction as well
+        var isHitForward = Physics.Raycast(new Ray(transform.position, dir), out hit, 1f);
+        var isHitUp = Physics.Raycast(new Ray(transform.position, transform.up), out hitUp, 1f);
+        if (!isHitForward || hit.collider.gameObject.CompareTag("PutOnTrigger"))
         {
             targetPosition = transform.position + dir * 1;
             IsMoved = true;
 			pushDir = dir;
+            if (isHitUp)
+            {
+                hitUp.collider.gameObject.GetComponent<Cube>().Move(dir);
+            }
         }
+
     }
 }

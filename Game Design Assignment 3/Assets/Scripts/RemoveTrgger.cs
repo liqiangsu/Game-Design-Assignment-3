@@ -18,7 +18,10 @@ public class RemoveTrgger : MonoBehaviour
     private float RemovingSpeed = 0.3f;
     [SerializeField]
     private string[] triggeringTags = { "player" };
-    private bool isTriggered = false;
+
+    [SerializeField] private Material triggedMaterial = null;
+
+    public bool IsTriggered = false;
     // Use this for initialization
     protected void Start()
     {
@@ -29,11 +32,11 @@ public class RemoveTrgger : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected void Update()
+    protected void FixedUpdate()
     {
-        if (isTriggered && IsEnabled)
+        if (IsTriggered && IsEnabled)
         {
-            //just removing objects' collider, so it fall
+            //just removing objeacts' collider, so it fall
             //TODO makeit slide to a position
             var rigi = RemovingObject.GetComponent<Rigidbody>();
             var col = RemovingObject.GetComponent<Collider>();
@@ -47,7 +50,7 @@ public class RemoveTrgger : MonoBehaviour
             //disable this trigger afterit is been activated
             IsEnabled = false;
         }
-        if (isTriggered)
+        if (IsTriggered)
         {
             if (RemovingObject.transform.position != targetPosition)
             {
@@ -61,7 +64,7 @@ public class RemoveTrgger : MonoBehaviour
                 rigi.constraints = RigidbodyConstraints.FreezeAll;
                 var col = RemovingObject.GetComponent<Collider>();
                 col.enabled = true;
-                isTriggered = false;
+                IsTriggered = false;
             }
         }
     }
@@ -71,7 +74,14 @@ public class RemoveTrgger : MonoBehaviour
     {
         if (triggeringTags.Contains(other.gameObject.tag))
         {
-            isTriggered = true;
+            if (IsEnabled) { 
+                AudioSource.PlayClipAtPoint(GetComponent<AudioSource>().clip, transform.position, 1f);
+                if (triggedMaterial)
+                {
+                    GetComponent<Renderer>().material = triggedMaterial;
+                }
+            }
+            IsTriggered = true;
         }
     }
 

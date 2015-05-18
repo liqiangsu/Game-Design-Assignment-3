@@ -27,7 +27,6 @@ GameObject:
   - 4: {fileID: 498914}
   - 198: {fileID: 19830036}
   - 199: {fileID: 19941150}
-  - 65: {fileID: 6590994}
   m_Layer: 0
   m_Name: RealFire
   m_TagString: DamagingParticle
@@ -43,6 +42,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 459796}
+  - 114: {fileID: 11406588}
   m_Layer: 0
   m_Name: FireParticle
   m_TagString: Untagged
@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.79999995}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 498914}
@@ -88,18 +88,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 459796}
   m_RootOrder: 0
---- !u!65 &6590994
-BoxCollider:
+--- !u!114 &11406588
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139066}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_GameObject: {fileID: 191134}
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 015b58c0fabd11f4a9485c8c4065d2ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19817988
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1402,7 +1401,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: .5
+    radius: .25
     angle: 0
     length: 5
     boxX: 1
