@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

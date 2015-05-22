@@ -12,19 +12,20 @@ public class Cube : MonoBehaviour
 
     private GameObject grid;
     private Rigidbody rigi;
+    [SerializeField]
+    Material hightlightMaterial;
+    Material orignalMeterial;
 	// Use this for initialization
 	void Start ()
 	{
 	    grid = GameObject.Find("Grid");
 	    rigi = this.GetComponent<Rigidbody>();
+        orignalMeterial = GetComponent<Renderer>().material;
+
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-	    if (name == "Cube 45")
-	    {
-	        //Debug.Log(GetComponent<Rigidbody>().velocity);
-	    }
 	    if (IsMoved)
 	    {
 	        GetComponent<Rigidbody>().MovePosition(
@@ -55,6 +56,16 @@ public class Cube : MonoBehaviour
                 hitUp.collider.gameObject.GetComponent<Cube>().Move(dir);
             }
         }
+        else
+        {
+            GetComponent<Renderer>().material = hightlightMaterial;
+            Invoke("ResetMaterial", 1f);
+        }
 
+    }
+
+    void ResetMaterial()
+    {
+        GetComponent<Renderer>().material = orignalMeterial;
     }
 }
