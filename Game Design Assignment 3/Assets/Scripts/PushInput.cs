@@ -15,6 +15,8 @@ public class PushInput : MonoBehaviour
     public float PushForce = 5;
     private GameObject player;
     private Transform pushCenter;
+    public float PushCooldownTime = 0.2f;
+
     private float lastPushTime = 0;
 	// Use this for initialization
 	void Start ()
@@ -26,12 +28,12 @@ public class PushInput : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		IsPushState = Input.GetButtonDown("Push");
+		IsPushState = Input.GetButton("Push");
 	    if (IsPushState)
 	    {
             // do nothing when last push is too quick
             // to preven cubes force out position
-            if (Time.time - lastPushTime < 0.3)
+            if (Time.time - lastPushTime < PushCooldownTime)
             {
                 return;
             }
