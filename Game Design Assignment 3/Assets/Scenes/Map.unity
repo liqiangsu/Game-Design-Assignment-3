@@ -111,7 +111,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 233506707}
   m_LocalRotation: {x: .682272971, y: -.185751721, z: .185751751, w: .682272851}
-  m_LocalPosition: {x: 14.8999996, y: 47.2999992, z: 55}
+  m_LocalPosition: {x: 18.5, y: 47.2999992, z: 55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 559607955}
@@ -126,7 +126,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: b0dbc6a6a4af94b7abe141768b1d750e, type: 2}
+  - {fileID: 2100000, guid: 5f9c574c78c80124abd7d376692af8d6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -158,7 +158,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 233506707}
-  lengthInSec: 5
+  lengthInSec: 90
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -352,7 +352,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startRotation:
-      scalar: .209788576
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -394,8 +394,8 @@ ParticleSystem:
     radius: 1
     angle: 25
     length: 5
-    boxX: 62.8472481
-    boxY: 44.4047775
+    boxX: 100
+    boxY: 100
     boxZ: 1
     arc: 360
     placementMode: 0
@@ -405,7 +405,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 3
+      scalar: 5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1246,7 +1246,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 336228984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.2399998, y: 0, z: 0}
+  m_LocalPosition: {x: .100000001, y: 7.80000019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1838114413}
@@ -3671,7 +3671,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1632009685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.6099997, y: 0, z: 0}
+  m_LocalPosition: {x: -21.2999992, y: 8.5, z: 0}
   m_LocalScale: {x: 1.31812561, y: 1.31812572, z: 1.31812572}
   m_Children:
   - {fileID: 501967793}
@@ -4894,7 +4894,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2009462158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .699999988, y: 16.5900002, z: 0}
+  m_LocalPosition: {x: 23.3999996, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1599072791}
