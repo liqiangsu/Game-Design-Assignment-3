@@ -11,8 +11,7 @@ public class PutOnTrigger : RemoveTrgger {
         if (other.CompareTag("Cube"))
         {
             var animator = other.gameObject.GetComponent<Animator>();
-            animator.SetBool("isVanish", true);
-            var renderer = GetComponent<Renderer>();
+            if(animator) animator.SetBool("isVanish", true);
             transform.position = Extesions.BlackHole;
         }
     }

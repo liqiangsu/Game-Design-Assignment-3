@@ -73,6 +73,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _ToonShade
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _Occlusion
         second:
           m_Texture: {fileID: 2800000, guid: 4e2f32e9a1fefc24092337ae061f3dbc, type: 3}
@@ -83,13 +90,6 @@ Material:
           name: _SpecGlossMap
         second:
           m_Texture: {fileID: 2800000, guid: c6093d6055cd6a44ebf0637f17fca0e8, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _ToonShade
-        second:
-          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -120,6 +120,14 @@ Material:
         first:
           name: _DstBlend
         second: 0
+      data:
+        first:
+          name: _TintColor
+        second: 0
+      data:
+        first:
+          name: _Outline
+        second: .300000012
       data:
         first:
           name: _Parallax
@@ -158,19 +166,11 @@ Material:
         second: 0
       data:
         first:
-          name: _Lightmapping
-        second: 0
-      data:
-        first:
           name: _Outl
         second: 1
       data:
         first:
           name: _DetailTex
-        second: 0
-      data:
-        first:
-          name: _TintColor
         second: 0
       data:
         first:
@@ -190,10 +190,6 @@ Material:
         second: 2
       data:
         first:
-          name: _Outline
-        second: .680000007
-      data:
-        first:
           name: _Asym
         second: 0
       data:
@@ -203,6 +199,10 @@ Material:
       data:
         first:
           name: _TrOp
+        second: 0
+      data:
+        first:
+          name: _Lightmapping
         second: 0
       data:
         first:
@@ -235,16 +235,12 @@ Material:
         second: {r: .0980392173, g: .0980392173, b: .0980392173, a: 1}
       data:
         first:
-          name: _EmissionColorUI
-        second: {r: 0, g: 0, b: 0, a: 1}
-      data:
-        first:
-          name: _EmissionColorWithMapUI
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _OutlineColor
         second: {r: .0294117928, g: .0294117928, b: .0294117928, a: 1}
+      data:
+        first:
+          name: _EmissionColorUI
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Asymmetry
@@ -253,6 +249,10 @@ Material:
         first:
           name: _SpecularColor
         second: {r: .242647052, g: .242647052, b: .242647052, a: 1}
+      data:
+        first:
+          name: _EmissionColorWithMapUI
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _ReflectColor
