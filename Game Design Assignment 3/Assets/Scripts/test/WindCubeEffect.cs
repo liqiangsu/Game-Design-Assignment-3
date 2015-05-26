@@ -4,13 +4,13 @@ using System.Collections;
 public class WindCubeEffect : MonoBehaviour {
 	[SerializeField]
 	private Vector3 v3;
-	[SerializeField]
+
 	public float speed;
-	public float direction;
-	[SerializeField]
-	private string targetTag;
-	[SerializeField]
-	private string targetTag2;
+	//public float direction;
+	//[SerializeField]
+	//private string targetTag;
+	//[SerializeField]
+	//private string targetTag2;
 
 
 
@@ -36,9 +36,9 @@ public class WindCubeEffect : MonoBehaviour {
 	void OnCollisionStay(Collision collisionInfo) {
 
 		GameObject go = collisionInfo.gameObject;
-		if (go.CompareTag (targetTag) || go.CompareTag(targetTag2)) {
+		//if (go.CompareTag (targetTag) || go.CompareTag(targetTag2)) {
 			go.transform.Translate (v3 * Time.deltaTime * speed,Space.World);
-		}
+		//}
 
 
 	}
