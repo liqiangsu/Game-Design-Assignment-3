@@ -3,22 +3,33 @@ using System.Collections;
 
 public class TimerMovingGround : MonoBehaviour
 {
-    public float IntervalTimeInSecond = 3;
-
+    [SerializeField]
+    float speed;
+    [SerializeField]
+    Vector3 direction;
     public bool IsStoped;
+
+    SaveHelper saveHelper;
 	// Use this for initialization
 	void Start () {
-	    InvokeRepeating("Move",IntervalTimeInSecond,1);
+        saveHelper = GameObject.FindObjectOfType<SaveHelper>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        transform.Translate(direction * speed * Time.deltaTime, Space.World);       
+    }
 
     void Move()
     {
-        var old = transform.position;
-        transform.position = new Vector3(old.x, old.y, old.z +1);
+
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            saveHelper.Load();
+        }
     }
 }
