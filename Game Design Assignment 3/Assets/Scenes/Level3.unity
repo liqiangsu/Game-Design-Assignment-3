@@ -1403,6 +1403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1 &55856583
 GameObject:
   m_PrefabParentObject: {fileID: 128342, guid: dd40416ad395f9a49a645bd19b4c30a7, type: 2}
@@ -1513,6 +1514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1 &61122417
 GameObject:
   m_PrefabParentObject: {fileID: 128342, guid: dd40416ad395f9a49a645bd19b4c30a7, type: 2}
@@ -9526,6 +9528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &526120689
 Prefab:
   m_ObjectHideFlags: 0
@@ -10219,6 +10222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &543706764
 Prefab:
   m_ObjectHideFlags: 0
@@ -10371,6 +10375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &553171286
 Prefab:
   m_ObjectHideFlags: 0
@@ -12383,6 +12388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &644419785
 Prefab:
   m_ObjectHideFlags: 0
@@ -12891,6 +12897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1 &672046061
 GameObject:
   m_PrefabParentObject: {fileID: 174690, guid: 6ab81c9cd2835604e87a473576efc1d2, type: 2}
@@ -14459,11 +14466,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 456048, guid: 8e06ddf0a1969ea4fb70eeb1ac10c793, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 456048, guid: 8e06ddf0a1969ea4fb70eeb1ac10c793, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 67
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 456048, guid: 8e06ddf0a1969ea4fb70eeb1ac10c793, type: 2}
       propertyPath: m_LocalRotation.x
@@ -17488,6 +17495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!4 &849935148
 Transform:
   m_PrefabParentObject: {fileID: 456048, guid: 8e06ddf0a1969ea4fb70eeb1ac10c793, type: 2}
@@ -17578,6 +17586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!4 &851943469
 Transform:
   m_PrefabParentObject: {fileID: 456048, guid: 8e06ddf0a1969ea4fb70eeb1ac10c793, type: 2}
@@ -17967,6 +17976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &863779872
 Prefab:
   m_ObjectHideFlags: 0
@@ -19203,6 +19213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!4 &954832491
 Transform:
   m_PrefabParentObject: {fileID: 456048, guid: 8e06ddf0a1969ea4fb70eeb1ac10c793, type: 2}
@@ -19542,6 +19553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &991675289
 Prefab:
   m_ObjectHideFlags: 0
@@ -20671,6 +20683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1065938264
 Prefab:
   m_ObjectHideFlags: 0
@@ -21563,6 +21576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1138241718
 Prefab:
   m_ObjectHideFlags: 0
@@ -23211,6 +23225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!4 &1212760324
 Transform:
   m_PrefabParentObject: {fileID: 456048, guid: 8e06ddf0a1969ea4fb70eeb1ac10c793, type: 2}
@@ -24095,6 +24110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1288433264
 Prefab:
   m_ObjectHideFlags: 0
@@ -25108,6 +25124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!4 &1330513187
 Transform:
   m_PrefabParentObject: {fileID: 456048, guid: 8e06ddf0a1969ea4fb70eeb1ac10c793, type: 2}
@@ -28193,6 +28210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1 &1484749919
 GameObject:
   m_PrefabParentObject: {fileID: 128342, guid: dd40416ad395f9a49a645bd19b4c30a7, type: 2}
@@ -30254,6 +30272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1581272030
 Prefab:
   m_ObjectHideFlags: 0
@@ -30336,6 +30355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1581812348
 Prefab:
   m_ObjectHideFlags: 0
@@ -30807,6 +30827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1608917049
 Prefab:
   m_ObjectHideFlags: 0
@@ -30889,6 +30910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1 &1609834915
 GameObject:
   m_ObjectHideFlags: 0
@@ -31599,6 +31621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1633261376
 Prefab:
   m_ObjectHideFlags: 0
@@ -32461,6 +32484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1685737435
 Prefab:
   m_ObjectHideFlags: 0
@@ -33901,6 +33925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1761247727
 Prefab:
   m_ObjectHideFlags: 0
@@ -35272,6 +35297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!4 &1783251431
 Transform:
   m_PrefabParentObject: {fileID: 456048, guid: 8e06ddf0a1969ea4fb70eeb1ac10c793, type: 2}
@@ -35787,6 +35813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1829529000
 Prefab:
   m_ObjectHideFlags: 0
@@ -37497,6 +37524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1920404463
 Prefab:
   m_ObjectHideFlags: 0
@@ -37845,6 +37873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1 &1936633752
 GameObject:
   m_PrefabParentObject: {fileID: 128342, guid: dd40416ad395f9a49a645bd19b4c30a7, type: 2}
@@ -38858,6 +38887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  hightlightMaterial: {fileID: 0}
 --- !u!1001 &1990356736
 Prefab:
   m_ObjectHideFlags: 0
