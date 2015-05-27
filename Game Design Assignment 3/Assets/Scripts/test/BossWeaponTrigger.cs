@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BossWeaponTrigger : MonoBehaviour {
 
+
 	// Use this for initialization
 	void Start () {
 	
