@@ -15,7 +15,7 @@ public class BossLevel1EnterDetector : MonoBehaviour
 	{
 	    bgm = GameObject.Find("BGM");
 	    audio = GetComponent<AudioSource>();
-	    boss = GetComponentInParent<BossLevel1>();
+	    boss = GameObject.FindObjectOfType<BossLevel1>();
 	}
 	
 	// Update is called once per frame

@@ -76,6 +76,11 @@ public class SaveHelper : MonoBehaviour {
     }
     public void Save()
     {
+        lastSave = RecordGameObjectPositions();
+    }
+
+    public static Dictionary<GameObject, SimpleTransform> RecordGameObjectPositions()
+    {
         var gos = GameObject.FindObjectsOfType<GameObject>();
         Dictionary<GameObject, SimpleTransform> record = new Dictionary<GameObject, SimpleTransform>();
         foreach (GameObject go in gos)
@@ -88,7 +93,7 @@ public class SaveHelper : MonoBehaviour {
             };
             record.Add(go, transform);
         }
-        lastSave = record;
+        return record;
     }
 
     public void Load()
@@ -100,6 +105,7 @@ public class SaveHelper : MonoBehaviour {
             {
                 if (entry.Key != null)
                 {
+                    //directly move player objects will cause bug, this is a walk arround
                     if (entry.Key.transform.IsChildOf(playerTransform) && !entry.Key.transform.CompareTag("Player"))
                     {
                         continue;
