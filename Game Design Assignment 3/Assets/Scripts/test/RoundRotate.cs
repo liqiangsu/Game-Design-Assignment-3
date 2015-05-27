@@ -5,20 +5,23 @@ public class RoundRotate : MonoBehaviour {
 	//private GameObject player;
 	[SerializeField]
 	Vector3 angles;
-	[SerializeField]
-	float Delay;
+	//[SerializeField]
+	//float Delay;
 	//bool PlayerRotate;
 
 	IEnumerator Start()
 	{
-		//player = GameObject.Find ("Player");
+		//GameObject player = GameObject.Find ("GroundCube 35");
 		//BeginPosition = transform.position;
 		//EndPositiosn = transform.FindChild("MovingTarget").position;
 		while (true)
 		{
 			yield return StartCoroutine(RotateObject(transform, angles));
-			//if(transform.rotation.x == 180 || transform.rotation.x == 0){
-			   //yield return new WaitForSeconds(Delay);
+			//if((transform.rotation.x >= 179.5 && transform.rotation.x <= 180.5) || (transform.rotation.x >= 0 && transform.rotation.x <= 1)){
+
+			//Debug.Log(transform.rotation.x);
+			//if(transform.rotation.eulerAngles.x <= 360  && transform.rotation.x >= 358){
+			//	yield return new WaitForSeconds(Delay);
 			//}
 		}
 	}
