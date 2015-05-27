@@ -47867,7 +47867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeRecordFrequence: .0299999993
   MaxRecordTime: 60
-  timeLoadFrequence: .0299999993
+  timeLoadFrequence: .00999999978
 --- !u!4 &794973799
 Transform:
   m_ObjectHideFlags: 0
@@ -72749,7 +72749,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.4099998
+      value: -4.23999977
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.y
@@ -72757,7 +72757,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 31.8899994
+      value: 34.4099998
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalRotation.x
