@@ -86,14 +86,18 @@ public class SaveHelper : MonoBehaviour {
         Dictionary<GameObject, SimpleTransform> record = new Dictionary<GameObject, SimpleTransform>();
         foreach (GameObject go in gos)
         {
-            var transform = new SimpleTransform()
+            var rigi = go.GetComponent<Rigidbody>();
+            if (rigi && !rigi.isKinematic)
             {
-                Position = go.transform.position,
-                Quaternation = go.transform.rotation,
-                Scale = go.transform.localScale,
-                LocalPosition = go.transform.localPosition
-            };
-            record.Add(go, transform);
+                var transform = new SimpleTransform()
+                {
+                    Position = go.transform.position,
+                    Quaternation = go.transform.rotation,
+                    Scale = go.transform.localScale,
+                    LocalPosition = go.transform.localPosition
+                };
+                record.Add(go, transform);
+            }
         }
         return record;
     }
