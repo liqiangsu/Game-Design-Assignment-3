@@ -5217,7 +5217,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 106683183}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -7, y: 6.03000021, z: 32}
+  m_LocalPosition: {x: -7, y: 6.51000023, z: 32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1356066356}
@@ -17327,7 +17327,7 @@ Transform:
   m_PrefabInternal: {fileID: 855269728}
   m_GameObject: {fileID: 293270420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: .5, z: 36}
+  m_LocalPosition: {x: 8, y: .5, z: 35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 261591833}
@@ -28325,6 +28325,33 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 976447880}
+  m_RootOrder: 0
+--- !u!1 &456349982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 456349983}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &456349983
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 456349982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 718328863}
   m_RootOrder: 0
 --- !u!1 &457709752
 GameObject:
@@ -42853,9 +42880,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 718328862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.02532148, y: -.81810236, z: -20.6183071}
+  m_LocalPosition: {x: -7.03000021, y: -.819999993, z: -20.6200008}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 456349983}
   m_Father: {fileID: 1111968478}
   m_RootOrder: 47
 --- !u!95 &718328864
@@ -47820,7 +47848,7 @@ GameObject:
   - 4: {fileID: 794973799}
   - 114: {fileID: 794973798}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47837,9 +47865,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f29eea69f1fd0448af765a4373ec74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRecordFrequence: .100000001
+  timeRecordFrequence: .0299999993
   MaxRecordTime: 60
-  timeLoadFrequence: .100000001
+  timeLoadFrequence: .0299999993
 --- !u!4 &794973799
 Transform:
   m_ObjectHideFlags: 0

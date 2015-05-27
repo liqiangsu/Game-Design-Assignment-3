@@ -11,6 +11,7 @@ public class SaveHelper : MonoBehaviour {
         public Vector3 Position = Vector3.zero;
         public Quaternion Quaternation = Quaternion.identity;
         public Vector3 Scale = new Vector3(1, 1, 1);
+        public Vector3 LocalPosition = Vector3.zero;
     }
 
     public class SmoothMoveJob
@@ -76,10 +77,10 @@ public class SaveHelper : MonoBehaviour {
     }
     public void Save()
     {
-        lastSave = RecordGameObjectPositions();
+        lastSave = RecordGameObjectTransform();
     }
 
-    public static Dictionary<GameObject, SimpleTransform> RecordGameObjectPositions()
+    public static Dictionary<GameObject, SimpleTransform> RecordGameObjectTransform()
     {
         var gos = GameObject.FindObjectsOfType<GameObject>();
         Dictionary<GameObject, SimpleTransform> record = new Dictionary<GameObject, SimpleTransform>();
@@ -89,7 +90,8 @@ public class SaveHelper : MonoBehaviour {
             {
                 Position = go.transform.position,
                 Quaternation = go.transform.rotation,
-                Scale = go.transform.localScale
+                Scale = go.transform.localScale,
+                LocalPosition = go.transform.localPosition
             };
             record.Add(go, transform);
         }

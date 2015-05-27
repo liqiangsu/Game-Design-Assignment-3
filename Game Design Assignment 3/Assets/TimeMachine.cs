@@ -17,13 +17,15 @@ public class TimeMachine : MonoBehaviour
     private float lastRecoredTime;
 
     private float lastLoadingTime;
-
+    
+    Transform playerTransform;
 
 
     List<SaveHelper.SmoothMoveJob> MoveJobs = new List<SaveHelper.SmoothMoveJob>();
 	// Use this for initialization
 	void Start ()
 	{
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 	    maxListSize = Mathf.RoundToInt(MaxRecordTime/timeRecordFrequence);
 	}
 
@@ -44,10 +46,6 @@ public class TimeMachine : MonoBehaviour
                     var theRigibody = o.GameObject.GetComponent<Rigidbody>();
                     if (theRigibody)
                     {
-                        if (theRigibody.position != o.End)
-                        {
-                            Debug.Log("rher");
-                        }
                         //reset collision detection and velocity;
                         theRigibody.detectCollisions = true;
                         theRigibody.velocity = Vector3.zero;
@@ -62,10 +60,7 @@ public class TimeMachine : MonoBehaviour
 
 	// Update is called once per frame
 	void Update () {
-	    if (!Input.GetKey(KeyCode.F) && Input.GetButtonDown("Push") && Time.time - lastRecoredTime > timeRecordFrequence)
-	    {
 
-	    }
 
         if(Input.GetKey(KeyCode.F))
 	    {
@@ -80,12 +75,24 @@ public class TimeMachine : MonoBehaviour
                 }
                 lastLoadingTime = Time.time;
             }
-	    }
+        }
+        else
+        {
+            if (Time.time - lastRecoredTime > timeRecordFrequence)
+            {
+                if (timeStack.Count > maxListSize)
+                {
+                    timeStack.RemoveFirst();
+                }
+                timeStack.AddLast(SaveHelper.RecordGameObjectTransform());
+                lastRecoredTime = Time.deltaTime;
+            }
+        }
 	}
 
     public void SnapTime()
     {
-        timeStack.AddLast(SaveHelper.RecordGameObjectPositions());
+        timeStack.AddLast(SaveHelper.RecordGameObjectTransform());
 
         //limiting the size of the stack
         if (timeStack.Count > lastRecoredTime)
@@ -94,35 +101,24 @@ public class TimeMachine : MonoBehaviour
         }
         lastRecoredTime = Time.time;
     }
-    public void Load(Dictionary<GameObject, SaveHelper.SimpleTransform> lastSave)
+    public void Load(Dictionary<GameObject, SaveHelper.SimpleTransform> snapShot)
     {
-        var playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        if (lastSave != null)
+        if (snapShot != null)
         {
-            foreach (var entry in lastSave)
+            foreach (var entry in snapShot)
             {
                 if (entry.Key != null)
                 {
-                    //directly move player objects will cause bug, this is a walk arround
-                    if (entry.Key.transform.IsChildOf(playerTransform) && !entry.Key.transform.CompareTag("Player"))
+                    var go = entry.Key;
+                    var savedTransform = entry.Value;
+                    if (go.transform.IsChildOf(playerTransform) && !go.transform.CompareTag("Player"))
                     {
                         continue;
                     }
-                    entry.Key.transform.rotation = entry.Value.Quaternation;
-
-                    //disable collider to prepare for strigh movement back to saved position.
-
-                    var theRigibody = entry.Key.GetComponent<Rigidbody>();
-
-                    if (theRigibody)
-                    {
-                        theRigibody.detectCollisions = false;
-                        //theRigibody.position = entry.Value.Position;
-                    }
-
-
-                    MoveJobs.Add(new SaveHelper.SmoothMoveJob() { GameObject = entry.Key, Start = entry.Key.transform.position, End = entry.Value.Position, StartTime = Time.time });
-                    entry.Key.transform.localScale = entry.Value.Scale;
+                    go.transform.position = savedTransform.Position;
+                    go.transform.rotation = savedTransform.Quaternation;
+                    go.transform.localScale = savedTransform.Scale;
+                    go.transform.localPosition = savedTransform.LocalPosition;
                 }
             }
         }
