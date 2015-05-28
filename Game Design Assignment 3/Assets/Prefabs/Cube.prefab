@@ -89,7 +89,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: .99000001, y: 1, z: .99000001}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &9566878
 Animator:
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
 --- !u!1001 &100100000
 Prefab:

@@ -30,7 +30,7 @@ public class Collectable : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            CollectionManager.CollectMagic(1);
+            CollectionManager.CollectMagic(MagicWorth);
             AudioSource.PlayClipAtPoint(audioSource.clip, transform.position, 1f);
 			Destroy(this.gameObject);
         }
