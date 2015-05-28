@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class SaveHelper : MonoBehaviour {
     public class SimpleTransform
@@ -82,7 +83,7 @@ public class SaveHelper : MonoBehaviour {
         foreach (GameObject go in gos)
         {
             var rigi = go.GetComponent<Rigidbody>();
-            if (go.CompareTag("PutOnTrigger") || rigi && !rigi.isKinematic)
+            if (go.CompareTag("PutOnTrigger") || (rigi && !rigi.isKinematic) || go.CompareTag("AllowTimeReverse"))
             {
                 var transform = new SimpleTransform()
                 {
@@ -178,6 +179,10 @@ public class SaveHelper : MonoBehaviour {
         Application.LoadLevel("Map");
     }
 
+    public void ExitToStart()
+    {
+        Application.LoadLevel("Start");
+    }
     public void ExitGame()
     {
         Application.Quit();

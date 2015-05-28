@@ -13,6 +13,7 @@ TagManager:
   - TouchTrigger
   - BGMSource
   - NoGridWall
+  - AllowTimeReverse
   layers:
   - Default
   - TransparentFX
