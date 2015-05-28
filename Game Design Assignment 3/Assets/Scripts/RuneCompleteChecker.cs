@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using System.Runtime.InteropServices;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using System.Collections;
 public class RuneCompleteChecker : MonoBehaviour

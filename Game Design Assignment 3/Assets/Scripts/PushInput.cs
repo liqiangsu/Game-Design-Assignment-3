@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization.Formatters;
-using UnityEditor;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
