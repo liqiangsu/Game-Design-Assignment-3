@@ -122,6 +122,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

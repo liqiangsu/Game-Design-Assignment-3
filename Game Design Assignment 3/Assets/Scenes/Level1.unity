@@ -2601,6 +2601,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &58756971
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2850,6 +2851,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &63984107
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3692,6 +3694,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &76653165
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5230,7 +5233,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: .99000001, y: 1, z: .99000001}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &106683188
 MonoBehaviour:
@@ -5246,6 +5249,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!54 &106683189
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7235,6 +7239,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &126891742
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7684,6 +7689,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &134443181
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11271,6 +11277,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &180021660
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12862,6 +12869,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &208315932
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13088,6 +13096,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &211520813
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13270,6 +13279,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &214379893
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13923,6 +13933,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &222116392
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14743,6 +14754,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &251912431
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16178,6 +16190,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &276871568
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17510,7 +17523,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: .99000001, y: 1, z: .99000001}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &294060032
 MonoBehaviour:
@@ -17526,6 +17539,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!54 &294060033
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19180,6 +19194,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &313851671
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20104,6 +20119,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &329926305
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20575,6 +20591,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &340488888
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20703,6 +20720,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &345107462
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23098,6 +23116,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &379310782
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25202,6 +25221,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &416252476
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26588,6 +26608,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &438341507
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27847,6 +27868,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &454061443
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29427,6 +29449,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &470822246
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30344,6 +30367,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &492426719
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30672,6 +30696,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &500183082
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31865,6 +31890,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &526019015
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33286,6 +33312,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &549977292
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34235,6 +34262,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &564527356
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34620,6 +34648,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &569719166
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35787,6 +35816,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &589706323
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36927,6 +36957,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &602292934
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37176,6 +37207,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &604460902
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37627,6 +37659,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &617936968
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38041,6 +38074,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &620977094
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39376,6 +39410,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &644022757
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41075,6 +41110,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &680227061
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41959,6 +41995,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &692319185
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42383,6 +42420,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &698960996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42538,6 +42576,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &699527995
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43257,6 +43296,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &718328867
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44413,6 +44453,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &733872089
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -44662,6 +44703,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &735017103
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48004,6 +48046,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &791733069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -51561,6 +51604,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &852345812
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -52859,6 +52903,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &885086089
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55389,6 +55434,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &918034322
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55749,6 +55795,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &920241939
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57683,6 +57730,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &953846120
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57966,12 +58014,12 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 955864876}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6548f6db9a969574aa074f6ec0a3a096, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 83b02d0a5d5d6466bb3673d1e2a73a72, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .180000007
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -60202,6 +60250,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &991544346
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60357,6 +60406,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &992273479
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -61002,6 +61052,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1005370011
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -61738,6 +61789,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1014048299
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64140,6 +64192,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1065248193
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65004,6 +65057,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1076204301
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65286,7 +65340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1083628391
 Transform:
   m_ObjectHideFlags: 0
@@ -66331,6 +66385,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1096742239
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66628,6 +66683,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1100194750
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66850,6 +66906,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1101778713
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -69086,6 +69143,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1133847089
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71002,6 +71060,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1157413841
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71351,6 +71410,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1159426888
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71573,6 +71633,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1162704452
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -71876,6 +71937,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1174106904
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -73316,15 +73378,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.8000002
+      value: .0399999991
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.84000015
+      value: 4.71000004
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.9000001
+      value: -6.48000002
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalRotation.x
@@ -74184,6 +74246,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1214197782
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -76171,6 +76234,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1250444569
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -77104,6 +77168,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1268529092
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -78305,7 +78370,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: .99000001, y: 1, z: .99000001}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1292837912
 MonoBehaviour:
@@ -78321,6 +78386,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!54 &1292837913
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78966,6 +79032,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1305651707
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -79552,6 +79619,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1316451845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -81507,6 +81575,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1343345986
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -81850,6 +81919,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1347357213
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -82669,6 +82739,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1363544986
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -83999,7 +84070,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1381255185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.02999997, y: -.819999993, z: -9.61999989}
+  m_LocalPosition: {x: -4.03000021, y: -.819999993, z: -7.61999989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1111968478}
@@ -84053,6 +84124,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1381255190
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -87079,6 +87151,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1414989842
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -88302,6 +88375,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1435701504
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -89560,6 +89634,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1459352195
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -90172,6 +90247,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1474779394
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -91565,6 +91641,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1498460524
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -92177,6 +92254,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1506604264
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -94387,6 +94465,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1528882101
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95726,6 +95805,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1548955149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -96284,6 +96364,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1562164921
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97665,6 +97746,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1582523900
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98952,6 +99034,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1598525438
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -100575,6 +100658,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1614254020
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -101178,6 +101262,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1621433732
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -102815,6 +102900,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1643363462
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -103861,6 +103947,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1654770983
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104711,6 +104798,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1664806658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104839,6 +104927,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1665064421
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104967,6 +105056,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1666137844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104982,7 +105072,7 @@ MeshRenderer:
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 0
+  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
@@ -105377,6 +105467,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1671343830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -106316,6 +106407,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1681866396
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -108536,6 +108628,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1718601701
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -108933,6 +109026,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1726381123
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -115211,6 +115305,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1816691276
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -116949,6 +117044,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1840045977
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -117672,6 +117768,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1847360416
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -117687,7 +117784,7 @@ MeshRenderer:
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 0
+  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
@@ -117894,6 +117991,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1850722213
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -118987,6 +119085,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1868970790
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -119958,6 +120057,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1884725468
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -119973,7 +120073,7 @@ MeshRenderer:
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 0
+  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
@@ -122782,6 +122882,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1941744422
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -123149,6 +123250,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1946582179
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -123690,6 +123792,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1958971092
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -124599,6 +124702,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1976094564
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -124727,6 +124831,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1978330281
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -124882,6 +124987,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &1980473287
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -126632,6 +126738,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2003845576
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -127304,6 +127411,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2013654215
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -127432,6 +127540,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2013941484
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -127835,7 +127944,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: .99000001, y: 1, z: .99000001}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2017321570
 MonoBehaviour:
@@ -127851,6 +127960,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!54 &2017321571
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128362,6 +128472,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2028357502
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -128963,6 +129074,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2038988169
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -129191,6 +129303,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2040439536
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -129635,6 +129748,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2049268340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -131413,6 +131527,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2060489688
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -131622,6 +131737,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2066759246
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -133249,6 +133365,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2100311778
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -135693,6 +135810,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2123955824
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -136649,6 +136767,7 @@ MonoBehaviour:
   speed: 5
   IsMoved: 0
   hightlightMaterial: {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  movingSoundClip: {fileID: 8300000, guid: 4e3159d26e2138c4bb41b644a2516ada, type: 3}
 --- !u!23 &2137646777
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -15,6 +15,8 @@ public class Cube : MonoBehaviour
     [SerializeField]
     Material hightlightMaterial;
     Material orignalMeterial;
+
+    [SerializeField] private AudioClip movingSoundClip;
 	// Use this for initialization
 	void Start ()
 	{
@@ -48,6 +50,7 @@ public class Cube : MonoBehaviour
         var isHitUp = Physics.Raycast(new Ray(transform.position, transform.up), out hitUp, 1f);
         if (!isHitForward || hit.collider.gameObject.CompareTag("PutOnTrigger"))
         {
+            AudioSource.PlayClipAtPoint(movingSoundClip, transform.position, 0.5f);
             targetPosition = transform.position + dir * 1;
             IsMoved = true;
 			pushDir = dir;
