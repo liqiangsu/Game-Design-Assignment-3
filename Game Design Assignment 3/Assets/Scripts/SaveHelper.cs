@@ -162,4 +162,25 @@ public class SaveHelper : MonoBehaviour {
             return lines.ToArray();
         }
     }
+
+
+    public void LoadLastCheckPoint()
+    {
+        GameObject.FindObjectOfType<InGameMenu>().DeactivateMenuItems();
+        Load();
+    }
+    public void RestartLevel()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void LoadMap()
+    {
+        Application.LoadLevel("Map");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

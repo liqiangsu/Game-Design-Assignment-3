@@ -69,6 +69,7 @@ public class TimeMachine : MonoBehaviour
 	    if (Input.GetKeyUp(KeyCode.F) || CollectionManager.MagicCount <= 0)
 	    {
 	        timeRewindAudioSource.Stop();
+            PlayerSwitchToNormalForm();
 	        if (starIcon)
 	        {
 	            starIcon.GetComponent<Animator>().Play("idel");
@@ -79,6 +80,7 @@ public class TimeMachine : MonoBehaviour
 	    {
 	        if (CollectionManager.MagicCount > 0)
 	        {
+                PlayerSwitchToTimeForm();
 	            if (!timeRewindAudioSource.isPlaying)
 	            {
 	                timeRewindAudioSource.Play();
@@ -152,5 +154,25 @@ public class TimeMachine : MonoBehaviour
                 }
             }
         }
+    }
+
+    void PlayerSwitchToTimeForm()
+    {
+        for (int i = 0; i < playerTransform.childCount; i++)
+        {
+            playerTransform.GetChild(i).gameObject.SetActive(false);
+
+        }
+        playerTransform.FindChild("TimeForm").gameObject.SetActive(true);
+    }
+
+    void PlayerSwitchToNormalForm()
+    {
+        for (int i = 0; i < playerTransform.childCount; i++)
+        {
+            playerTransform.GetChild(i).gameObject.SetActive(true);
+
+        }
+        playerTransform.FindChild("TimeForm").gameObject.SetActive(false);
     }
 }

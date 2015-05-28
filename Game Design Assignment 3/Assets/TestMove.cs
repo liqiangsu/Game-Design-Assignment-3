@@ -14,7 +14,7 @@ public class TestMove : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-	     transform.Translate(dirction * speed * Time.deltaTime);
+	     transform.Translate(dirction * speed * Time.deltaTime, Space.World);
 	}
 
 }

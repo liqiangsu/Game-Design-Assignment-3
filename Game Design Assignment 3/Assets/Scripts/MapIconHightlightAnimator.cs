@@ -2,14 +2,16 @@
 
 public class MapIconHightlightAnimator : MonoBehaviour
 {
-    private ParticleSystem ps;
+    private ParticleSystem childParticleSystem;
 
     public ParticleSystem rain;
     public Mesh Mesh;
+    private AudioSource audioSource;
 	// Use this for initialization
 	void Start ()
 	{
-	    ps = GetComponentInChildren<ParticleSystem>();
+	    childParticleSystem = GetComponentInChildren<ParticleSystem>();
+	    audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -19,12 +21,19 @@ public class MapIconHightlightAnimator : MonoBehaviour
 
     void OnMouseEnter()
     {
-        Debug.Log("ps " + rain);
-        ps.Play();
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+        childParticleSystem.Play();
         rain.GetComponent<ParticleSystemRenderer>().mesh = Mesh;
     }
     void OnMouseExit()
     {
-        ps.Stop();
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        childParticleSystem.Stop();
     }
 }
