@@ -6714,6 +6714,8 @@ MonoBehaviour:
   height: 6
   rotationDamping: 0
   heightDamping: 1
+  scrollSpeed: 2
+  rotateSpeed: .439999998
 --- !u!114 &112425324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23546,7 +23548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &382572541
 Transform:
   m_ObjectHideFlags: 0
@@ -73386,7 +73388,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .0399999991
+      value: -19.9300003
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.y
@@ -73394,7 +73396,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -6.48000002
+      value: 32.6599998
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalRotation.x
@@ -82105,7 +82107,7 @@ GameObject:
   - 4: {fileID: 1356066356}
   - 114: {fileID: 1356066357}
   m_Layer: 0
-  m_Name: Stage5
+  m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129992,7 +129994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &2053085142
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0

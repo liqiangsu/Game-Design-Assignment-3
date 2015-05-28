@@ -20,6 +20,13 @@ namespace Assets.Utility
 		[SerializeField]
 		private float heightDamping;
 
+        [SerializeField]
+        float scrollSpeed = 1;
+
+        Vector3 MouseStart;
+        float dragDistance;
+        [SerializeField]
+        float rotateSpeed;
 		// Use this for initialization
 		void Start() { }
 
@@ -29,6 +36,28 @@ namespace Assets.Utility
 			// Early out if we don't have a target
 			if (!Target)
 				return;
+
+            // rotate
+            if (Input.GetMouseButtonDown(0))
+            {
+                MouseStart = Input.mousePosition;
+            }
+            if(Input.GetMouseButton(0)){
+                dragDistance = MouseStart.x - Input.mousePosition.x;
+                transform.Rotate(new Vector3(0, dragDistance * rotateSpeed * Time.deltaTime), Space.World);
+            }
+
+
+            //change ceamra height by scorll
+            height += Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
+            if (height < 0)
+            {
+                height = 0;
+            }
+            if (height > 10)
+            {
+                height = 10;
+            }
 
 			// Calculate the current rotation angles
 			var wantedRotationAngle = Target.eulerAngles.y;
@@ -56,7 +85,10 @@ namespace Assets.Utility
 
 			// Always look at the target
 			transform.LookAt(Target);
+            
+
 		}
 	}
+
 
 }

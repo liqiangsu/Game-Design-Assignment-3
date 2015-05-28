@@ -90,7 +90,6 @@ public class TimeMachine : MonoBehaviour
                     starIcon.GetComponent<Animator>().Play("rotate");
                 }
 	            CollectionManager.UseMagic(MagicUsePerSecond*Time.deltaTime);
-	            Debug.Log(timeStack.Count);
 	            if (Time.time - lastLoadingTime > timeLoadFrequence)
 	            {
 	                if (timeStack.Count > 0)
