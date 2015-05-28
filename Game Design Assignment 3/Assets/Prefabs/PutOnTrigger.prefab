@@ -160,7 +160,7 @@ MonoBehaviour:
   IsEnabled: 1
   IsDestoryAfterMovment: 0
   movingTime: 1
-  RemovingSpeed: .300000012
+  RemovingSpeed: 1
   triggeringTags:
   - Cube
   triggedMaterial: {fileID: 0}

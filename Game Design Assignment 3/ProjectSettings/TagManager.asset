@@ -12,6 +12,7 @@ TagManager:
   - TrapWall
   - TouchTrigger
   - BGMSource
+  - NoGridWall
   layers:
   - Default
   - TransparentFX

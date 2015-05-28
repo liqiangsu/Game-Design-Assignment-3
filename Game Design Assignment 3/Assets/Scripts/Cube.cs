@@ -4,7 +4,7 @@ using UnityEngine;
 public class Cube : MonoBehaviour
 {
     public float speed = 1;
-    private bool IsMoved;
+    public bool IsMoved;
 
     private Vector3 targetPosition;
 

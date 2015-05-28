@@ -221,9 +221,10 @@ MonoBehaviour:
   IsEnabled: 1
   IsDestoryAfterMovment: 0
   movingTime: 1
-  RemovingSpeed: .300000012
+  RemovingSpeed: 1
   triggeringTags:
   - Player
+  triggedMaterial: {fileID: 0}
   IsTriggered: 0
 --- !u!1001 &100100000
 Prefab:

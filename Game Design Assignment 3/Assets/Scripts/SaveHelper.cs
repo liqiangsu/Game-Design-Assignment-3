@@ -61,10 +61,6 @@ public class SaveHelper : MonoBehaviour {
                     var theRigibody = o.GameObject.GetComponent<Rigidbody>();
                     if (theRigibody)
                     {
-                        if (theRigibody.position != o.End)
-                        {
-                            Debug.Log("rher");
-                        }
                         //reset collision detection and velocity;
                         theRigibody.detectCollisions = true;
                         theRigibody.velocity = Vector3.zero;
@@ -87,7 +83,7 @@ public class SaveHelper : MonoBehaviour {
         foreach (GameObject go in gos)
         {
             var rigi = go.GetComponent<Rigidbody>();
-            if (rigi && !rigi.isKinematic)
+            if (go.CompareTag("PutOnTrigger") || rigi && !rigi.isKinematic)
             {
                 var transform = new SimpleTransform()
                 {
@@ -127,7 +123,11 @@ public class SaveHelper : MonoBehaviour {
                         theRigibody.detectCollisions = false;
                         //theRigibody.position = entry.Value.Position;
                     }
-
+                    var cube = entry.Key.GetComponent<Cube>();
+                    if (cube)
+                    {
+                        cube.IsMoved = false;
+                    }
 
                     MoveJobs.Add(new SmoothMoveJob(){GameObject = entry.Key, Start = entry.Key.transform.position, End = entry.Value.Position, StartTime = Time.time});
                     entry.Key.transform.localScale = entry.Value.Scale;

@@ -36,8 +36,6 @@ public class RemoveTrgger : MonoBehaviour
     {
         if (IsTriggered && IsEnabled)
         {
-            //just removing objeacts' collider, so it fall
-            //TODO makeit slide to a position
             var rigi = RemovingObject.GetComponent<Rigidbody>();
             var col = RemovingObject.GetComponent<Collider>();
             col.enabled = false;

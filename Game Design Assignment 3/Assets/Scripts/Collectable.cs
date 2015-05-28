@@ -1,21 +1,14 @@
-﻿using System;
-using UnityEditor;
-using UnityEngine;
-using System.Collections;
+﻿using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    private CollectionManager collectionManager;
-    private GameObject Player;
-    [SerializeField] public float MagnetDistance = 1;
-    [SerializeField] public float MagnetSpeed = 2;
+    [SerializeField] public float MagicWorth = 1;
 
-    private AudioSource audio;
+    private AudioSource audioSource;
 	// Use this for initialization
 	void Start ()
 	{
-	    Player = GameObject.FindGameObjectWithTag("Player");
-	    audio = GetComponent<AudioSource>();
+	    audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -37,8 +30,8 @@ public class Collectable : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            CollectionManager.MagicCount++;
-            AudioSource.PlayClipAtPoint(audio.clip, transform.position, 1f);
+            CollectionManager.CollectMagic(1);
+            AudioSource.PlayClipAtPoint(audioSource.clip, transform.position, 1f);
 			Destroy(this.gameObject);
         }
     }

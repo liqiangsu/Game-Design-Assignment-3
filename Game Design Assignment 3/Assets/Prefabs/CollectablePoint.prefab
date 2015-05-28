@@ -262,8 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b128c4bae0e96f4eb70f6509e67e87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MagnetDistance: 1
-  MagnetSpeed: 2
+  MagicWorth: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

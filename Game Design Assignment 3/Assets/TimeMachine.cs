@@ -13,6 +13,10 @@ public class TimeMachine : MonoBehaviour
     [SerializeField] private float MaxRecordTime = 60;
 
     [SerializeField] private float timeLoadFrequence = 0.1f;
+    [SerializeField] private float MagicUsePerSecond = 3;
+
+    [SerializeField] private GameObject starIcon;
+    private AudioSource timeRewindAudioSource;
     private int maxListSize;
     private float lastRecoredTime;
 
@@ -27,6 +31,7 @@ public class TimeMachine : MonoBehaviour
 	{
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 	    maxListSize = Mathf.RoundToInt(MaxRecordTime/timeRecordFrequence);
+	    timeRewindAudioSource = GetComponent<AudioSource>();
 	}
 
     void FixedUpdate()
@@ -61,21 +66,41 @@ public class TimeMachine : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 
+	    if (Input.GetKeyUp(KeyCode.F) || CollectionManager.MagicCount <= 0)
+	    {
+	        timeRewindAudioSource.Stop();
+	        if (starIcon)
+	        {
+	            starIcon.GetComponent<Animator>().Play("idel");
+	        }
+	    }
 
         if(Input.GetKey(KeyCode.F))
 	    {
-            Debug.Log(timeStack.Count);
-            if (Time.time - lastLoadingTime > timeLoadFrequence)
-            {
-                if (timeStack.Count > 0)
+	        if (CollectionManager.MagicCount > 0)
+	        {
+	            if (!timeRewindAudioSource.isPlaying)
+	            {
+	                timeRewindAudioSource.Play();
+	            }
+                if (starIcon)
                 {
-                    var snapShotDictionary = timeStack.Last.Value;
-                    Load(snapShotDictionary);
-                    timeStack.RemoveLast();
+                    starIcon.GetComponent<Animator>().Play("rotate");
                 }
-                lastLoadingTime = Time.time;
-            }
-        }
+	            CollectionManager.UseMagic(MagicUsePerSecond*Time.deltaTime);
+	            Debug.Log(timeStack.Count);
+	            if (Time.time - lastLoadingTime > timeLoadFrequence)
+	            {
+	                if (timeStack.Count > 0)
+	                {
+	                    var snapShotDictionary = timeStack.Last.Value;
+	                    Load(snapShotDictionary);
+	                    timeStack.RemoveLast();
+	                }
+	                lastLoadingTime = Time.time;
+	            }
+	        }
+	    }
         else
         {
             if (Time.time - lastRecoredTime > timeRecordFrequence)
@@ -114,6 +139,11 @@ public class TimeMachine : MonoBehaviour
                     if (go.transform.IsChildOf(playerTransform) && !go.transform.CompareTag("Player"))
                     {
                         continue;
+                    }
+                    var cube = go.GetComponent<Cube>();
+                    if (cube)
+                    {
+                        cube.IsMoved = false;
                     }
                     go.transform.position = savedTransform.Position;
                     go.transform.rotation = savedTransform.Quaternation;
