@@ -14,6 +14,8 @@ TagManager:
   - BGMSource
   - NoGridWall
   - AllowTimeReverse
+  - LVL3_Top
+  - LVL3_Wall
   layers:
   - Default
   - TransparentFX
