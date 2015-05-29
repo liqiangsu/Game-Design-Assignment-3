@@ -40983,7 +40983,7 @@ MonoBehaviour:
   timeRecordFrequence: .0299999993
   MaxRecordTime: 60
   timeLoadFrequence: .00999999978
-  MagicUsePerSecond: 3
+  MagicUsePerSecond: 1
   starIcon: {fileID: 1642881136}
 --- !u!4 &794973799
 Transform:
@@ -62075,15 +62075,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.02999997
+      value: 1.72000003
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.71000004
+      value: 1.82000005
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 29.7999992
+      value: -6.26999998
       objectReference: {fileID: 0}
     - target: {fileID: 463058, guid: 769d68c82f11a0048aa1ad2b65192f47, type: 2}
       propertyPath: m_LocalRotation.x

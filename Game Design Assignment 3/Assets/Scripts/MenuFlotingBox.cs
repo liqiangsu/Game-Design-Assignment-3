@@ -20,7 +20,7 @@ public class MenuFlotingBox : MonoBehaviour {
 	void Start () {
         orgPosition = transform.position;
         delay = Random.insideUnitSphere.magnitude * DelayOffset;
-        targetPosition = orgPosition + offSet;
+        targetPosition = orgPosition + offSet * Random.Range(-100,100) * 0.02f;
 	}
 	
 	// Update is called once per frame
