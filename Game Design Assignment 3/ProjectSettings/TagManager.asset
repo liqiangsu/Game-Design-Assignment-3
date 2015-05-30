@@ -16,6 +16,8 @@ TagManager:
   - AllowTimeReverse
   - LVL3_Top
   - LVL3_Wall
+  - LVL3_Guardrail
+  - LVL3_TriggerWall
   layers:
   - Default
   - TransparentFX
