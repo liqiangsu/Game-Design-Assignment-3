@@ -13,7 +13,7 @@ public class RemoveTrgger : MonoBehaviour
     [SerializeField]
     bool IsDestoryAfterMovment = false;
     [SerializeField]
-    private float movingTime = 1f;
+    private float movingTime = 0f;
     [SerializeField]
     private float RemovingSpeed = 0.3f;
     [SerializeField]

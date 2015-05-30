@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: InvertColor
-  m_Shader: {fileID: 4800000, guid: 73465f040810e7c40aa47b0f58b42c5d, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: 3000
@@ -18,7 +18,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 8dc4742176d27284986ec78f01c4afb9, type: 3}
+          m_Texture: {fileID: 2800000, guid: f588d850485d0ae479d73cf3bd0b7b00, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -88,7 +88,7 @@ Material:
       data:
         first:
           name: _Cutoff
-        second: .5
+        second: 1
       data:
         first:
           name: _SrcBlend
@@ -149,6 +149,10 @@ Material:
         first:
           name: _bwBlend
         second: .569999993
+      data:
+        first:
+          name: _Flash
+        second: .439999998
     m_Colors:
       data:
         first:
@@ -157,7 +161,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: .352941185, b: 0, a: .501960814}
+        second: {r: 1, g: 1, b: 1, a: .501960814}
       data:
         first:
           name: _EmissionColorUI
@@ -178,3 +182,7 @@ Material:
         first:
           name: _node_1261
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _FlashColor
+        second: {r: 1, g: .338235259, b: .717776716, a: 1}
