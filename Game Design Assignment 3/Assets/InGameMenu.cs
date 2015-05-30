@@ -31,6 +31,7 @@ public class InGameMenu : MonoBehaviour
             var child = transform.GetChild(i);
             child.gameObject.SetActive(true);
         }
+        Time.timeScale = 0;
     }
 
     public void DeactivateMenuItems()
@@ -40,5 +41,6 @@ public class InGameMenu : MonoBehaviour
             var child = transform.GetChild(i);
             child.gameObject.SetActive(false);
         }
+        Time.timeScale = 1;
     }
 }

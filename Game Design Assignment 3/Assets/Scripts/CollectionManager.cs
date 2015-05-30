@@ -16,7 +16,9 @@ public class CollectionManager : MonoBehaviour
     }
 	// Use this for initialization
 	void Start () {
-	    
+#if DEBUG || UNITY_EDITOR
+	    MagicCount = 25;
+#endif
 	}
 	
 	// Update is called once per frame

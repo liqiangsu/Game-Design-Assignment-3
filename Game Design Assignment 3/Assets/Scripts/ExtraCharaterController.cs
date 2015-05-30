@@ -50,15 +50,6 @@ public class ExtraCharaterController : MonoBehaviour
 
         var h = CrossPlatformInputManager.GetAxis("Horizontal");
         var v = CrossPlatformInputManager.GetAxis("Vertical");
-        if (character.m_IsGrounded && character.GetComponent<Rigidbody>().velocity.magnitude < 1)
-        {
-            v = v < 0 ? -1 : v > 0 ? 1 : 0;
-            h = h < 0 ? -1 : h > 0 ? 1 : 0;
-            var camForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
-            var move = v * camForward * SmallMoveSpeed + h * cameraTransform.right * SmallMoveSpeed;
-            character.transform.position += move;
-        }
-
         if (!character.m_IsGrounded)
         {
             var y = rigi.velocity.y;

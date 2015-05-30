@@ -18,6 +18,7 @@ TagManager:
   - LVL3_Wall
   - LVL3_Guardrail
   - LVL3_TriggerWall
+  - FakeWall
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		[SerializeField] float m_MoveSpeedMultiplier = 100f;
 		[SerializeField] float m_AnimSpeedMultiplier = 1f;
 		[SerializeField] float m_GroundCheckDistance = 0.1f;
-
+        [SerializeField]
+        private float turnSpeed = 2000;
         [SerializeField] public bool m_IsGrounded;
 
 		Rigidbody m_Rigidbody;
@@ -186,7 +187,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void ApplyExtraTurnRotation()
 		{
 			// help the character turn faster (this is in addition to root rotation in the animation)
-		    float turnSpeed = 3000; //= Mathf.Lerp(m_StationaryTurnSpeed, m_MovingTurnSpeed, m_ForwardAmount);
+		    //= Mathf.Lerp(m_StationaryTurnSpeed, m_MovingTurnSpeed, m_ForwardAmount);
 			transform.Rotate(0, m_TurnAmount * turnSpeed * Time.deltaTime, 0);
 		}
 

@@ -14,7 +14,7 @@ public class TimeMachine : MonoBehaviour
 
     [SerializeField] private float timeLoadFrequence = 0.1f;
     [SerializeField] private float MagicUsePerSecond = 3;
-
+    [SerializeField] private GameObject InvertColorFilter;
     [SerializeField] private GameObject starIcon;
     private AudioSource timeRewindAudioSource;
     private int maxListSize;
@@ -74,6 +74,10 @@ public class TimeMachine : MonoBehaviour
 	        {
 	            starIcon.GetComponent<Animator>().Play("idel");
 	        }
+	        if (InvertColorFilter)
+	        {
+	            InvertColorFilter.SetActive(false);
+	        }
 	    }
 
         if(Input.GetKey(KeyCode.F))
@@ -88,6 +92,10 @@ public class TimeMachine : MonoBehaviour
                 if (starIcon)
                 {
                     starIcon.GetComponent<Animator>().Play("rotate");
+                }
+                if (InvertColorFilter)
+                {
+                    InvertColorFilter.SetActive(true);
                 }
 	            CollectionManager.UseMagic(MagicUsePerSecond*Time.deltaTime);
 	            if (Time.time - lastLoadingTime > timeLoadFrequence)
