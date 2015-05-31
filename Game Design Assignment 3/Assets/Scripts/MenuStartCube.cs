@@ -43,5 +43,6 @@ public class MenuStartCube : MonoBehaviour
     void OnMouseExit()
     {
         targetPosition = orgPosition;
+        audioSource.Stop();
     }
 }

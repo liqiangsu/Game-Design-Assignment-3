@@ -2241,7 +2241,7 @@ GameObject:
   - 114: {fileID: 523340512}
   - 82: {fileID: 523340518}
   m_Layer: 0
-  m_Name: MenuFloatingBox 21
+  m_Name: midbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2258,7 +2258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaab1a4dfe34e8a439a1a04c75516787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: .300000012
 --- !u!114 &523340513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2286,7 +2286,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 029d4bb018f9593468fedddaca52aa58, type: 2}
+  - {fileID: 2100000, guid: 918315d91ed61d6438e7597588f876d7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -6092,7 +6092,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e0fe01e7126e0144c95ef3d4aef3cb7d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .26699999
   m_Pitch: 1
   Loop: 0
   Mute: 0
