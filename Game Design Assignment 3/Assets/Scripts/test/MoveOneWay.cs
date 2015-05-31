@@ -4,7 +4,7 @@ using System.Collections;
 public class MoveOneWay : MonoBehaviour {
 	private bool allowMove = false;
 
-	private Vector3 beginPosition;
+	//private Vector3 beginPosition;
 	private GameObject player;
 
 
@@ -21,7 +21,7 @@ public class MoveOneWay : MonoBehaviour {
 	// Use this for initialization
 	IEnumerator Start () {
 		player = GameObject.Find ("Player");
-		beginPosition = transform.position;
+		//beginPosition = transform.position;
 		while (true)
 		{
 			yield return new WaitForSeconds(0.2f);
