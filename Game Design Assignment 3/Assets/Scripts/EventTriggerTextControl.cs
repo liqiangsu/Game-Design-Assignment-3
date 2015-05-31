@@ -10,6 +10,9 @@ public class EventTriggerTextControl : MonoBehaviour
     private Canvas CanvasCanvas;
     private CanvasRenderer canvasRenderer;
     private CanvasRenderer textCanvsRenderer;
+
+    private float currentTimeOff;
+    private float lastActivateTime;
 	// Use this for initiali zation
 	void Start ()
 	{
@@ -34,6 +37,10 @@ public class EventTriggerTextControl : MonoBehaviour
             textCanvsRenderer.SetAlpha(Mathf.Lerp(canvasRenderer.GetAlpha(), 0, 0.1f));
 	        //CanvasCanvas.enabled = false;
 	    }
+	    if (isActivate && Time.time - currentTimeOff > lastActivateTime)
+	    {
+	        TimeOut();
+	    }
 	}
 
     public void Activate(string message,
@@ -42,7 +49,8 @@ public class EventTriggerTextControl : MonoBehaviour
         isActivate = true;
         //CanvasCanvas.enabled = true;
         this.GetComponent<Text>().text = message;
-        Invoke("TimeOut", timeOff);
+        lastActivateTime = Time.time;
+        currentTimeOff = timeOff;
     }
 
     void TimeOut()

@@ -24,6 +24,6 @@ public class FinalTeleporter : MonoBehaviour {
 
     void LoadLevel3()
     {
-        //Application.LoadLevel("Level3");
+        Application.LoadLevel("Level3");
     }
 }

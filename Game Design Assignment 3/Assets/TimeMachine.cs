@@ -2,7 +2,6 @@
 using System.Linq;
 using UnityEngine;
 using System.Collections;
-using UnityEngine.iOS;
 
 public class TimeMachine : MonoBehaviour
 {

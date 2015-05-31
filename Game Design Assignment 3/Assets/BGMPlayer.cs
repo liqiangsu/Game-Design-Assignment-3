@@ -34,7 +34,6 @@ public class BGMPlayer : MonoBehaviour {
         {
             PlayClip(GetLastClipID());
         }
-        Debug.Log(currentClipID);
     }
 
     int GetNextClipID()

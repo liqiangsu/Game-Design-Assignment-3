@@ -5,16 +5,9 @@ public class BossLevel1EnterDetector : MonoBehaviour
 {
     private BossLevel1 boss;
     [SerializeField]
-    private AudioClip clip;
-
-    private GameObject bgm;
-    private AudioClip org;
-    private AudioSource audio;
 	// Use this for initialization
 	void Start ()
 	{
-	    bgm = GameObject.Find("BGM");
-	    audio = GetComponent<AudioSource>();
 	    boss = GameObject.FindObjectOfType<BossLevel1>();
 	}
 	
@@ -27,8 +20,6 @@ public class BossLevel1EnterDetector : MonoBehaviour
     {
         if (other.CompareTag("Player")) { 
             boss.IsPlayerInArea = true;
-            bgm.GetComponent<AudioSource>().Stop();
-            audio.Play();
         }
     }
 
@@ -36,8 +27,6 @@ public class BossLevel1EnterDetector : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            bgm.GetComponent<AudioSource>().Play();
-            audio.Stop();
             boss.IsPlayerInArea = false;
         }
         
