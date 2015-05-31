@@ -39,13 +39,17 @@ public class BGMPlayer : MonoBehaviour {
 
     int GetNextClipID()
     {
-        currentClipID = (currentClipID + 1) % Clips.Length;
+		if (Clips.Length != 0) {
+			currentClipID = (currentClipID + 1) % Clips.Length;
+		}
         return currentClipID;
     }
 
     int GetLastClipID()
     {
-        currentClipID = (currentClipID - 1) % Clips.Length;
+		if (Clips.Length != 0) {
+			currentClipID = (currentClipID - 1) % Clips.Length;
+		}
         return currentClipID;
     }
     void PlayClip(int i)
