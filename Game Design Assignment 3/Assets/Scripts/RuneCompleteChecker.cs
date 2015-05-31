@@ -30,6 +30,12 @@ public class RuneCompleteChecker : MonoBehaviour
 	            var teleporter = transform.Find("FinalTeleporter");
                 teleporter.gameObject.SetActive(true);
 	        }
+	        if (Application.loadedLevelName == "Level3")
+	        {
+                cameraController.Target = boss.transform;
+                boss.transform.FindChild("DestoryAnimation").gameObject.SetActive(true);
+                Invoke("LoadEndGame", 3);
+	        }
 	    }
 	}
 
@@ -76,5 +82,11 @@ public class RuneCompleteChecker : MonoBehaviour
     void LoadLevel2()
     {
         Application.LoadLevel("Level2");
+    }
+
+    void LoadEndGame()
+    {
+        Application.LoadLevel("EndGame");
+
     }
 }
