@@ -17525,7 +17525,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11451298, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
       propertyPath: Message
-      value: 'It seem mat after I set it on fire.
+      value: 'It seem MAD!
 
         I better RUN!!!'
       objectReference: {fileID: 0}
