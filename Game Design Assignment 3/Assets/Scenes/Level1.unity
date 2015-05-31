@@ -70451,6 +70451,77 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1367190975}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1367973689
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2137034547}
+    m_Modifications:
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.06500006
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.09200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 35.4529991
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11451298, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: TextControl
+      value: 
+      objectReference: {fileID: 1279284471}
+    - target: {fileID: 146938, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_Name
+      value: EventTrigger-Rune
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504612, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504612, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_Size.z
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11451298, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: Message
+      value: "Hmm, Some sort of seal or rune. \nWhat has it to do with the giant thing
+        over here?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504612, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1367973690
+Transform:
+  m_PrefabParentObject: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+  m_PrefabInternal: {fileID: 1367973689}
 --- !u!1 &1368271345
 GameObject:
   m_ObjectHideFlags: 0
@@ -117223,6 +117294,7 @@ Transform:
   - {fileID: 1435431978}
   - {fileID: 373047067}
   - {fileID: 1094751729}
+  - {fileID: 1367973690}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1001 &2137378900
