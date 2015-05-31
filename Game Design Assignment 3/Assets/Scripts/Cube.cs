@@ -17,6 +17,7 @@ public class Cube : MonoBehaviour
     Material orignalMeterial;
 
     [SerializeField] private AudioClip movingSoundClip;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -30,7 +31,8 @@ public class Cube : MonoBehaviour
 	void FixedUpdate () {
 	    if (IsMoved)
 	    {
-	        GetComponent<Rigidbody>().MovePosition(
+	        rigi.useGravity = false;
+	        rigi.MovePosition(
                         Vector3.MoveTowards(transform.position, targetPosition,
 	                    speed*Time.deltaTime));
 		}
@@ -39,6 +41,7 @@ public class Cube : MonoBehaviour
 	    {
 			grid.GetComponent<Grid>().ForeceGrid();
 	        IsMoved = false;
+	        rigi.useGravity = true;
 	    }
 	}
     public void Move(Vector3 dir)
