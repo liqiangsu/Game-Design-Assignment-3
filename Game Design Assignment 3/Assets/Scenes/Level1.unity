@@ -4487,7 +4487,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0c34eabd1aaba474388f0663c04996e8, type: 2}
+  - {fileID: 2100000, guid: c4068753867fc544ea88aee6905703e1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -14895,7 +14895,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 45692757f050de64895e02d2e2c2c1cc, type: 2}
+  - {fileID: 2100000, guid: ce7dff650d9a7b34dbe7ae94cba4a7d6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -19345,7 +19345,7 @@ Prefab:
       objectReference: {fileID: 1279284471}
     - target: {fileID: 146938, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
       propertyPath: m_Name
-      value: EventTrigger-CheckPoint 1
+      value: EventTrigger-Time reverse
       objectReference: {fileID: 0}
     - target: {fileID: 6504612, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
       propertyPath: m_Size.x
@@ -20800,7 +20800,7 @@ Animator:
     type: 2}
   m_PrefabInternal: {fileID: 326130175}
   m_GameObject: {fileID: 407568981}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4b666b48742fa674fb7704a306523344, type: 2}
   m_CullingMode: 0
@@ -55740,6 +55740,74 @@ MonoBehaviour:
   cameraTransform: {fileID: 0}
   SmallMoveSpeed: .0299999993
   RotatSpeed: 0
+--- !u!1001 &1094751728
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2137034547}
+    m_Modifications:
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .980000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .550000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 8.86999989
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11451298, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: TextControl
+      value: 
+      objectReference: {fileID: 1279284471}
+    - target: {fileID: 146938, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_Name
+      value: EventTrigger-Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504612, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504612, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: m_Size.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11451298, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+      propertyPath: Message
+      value: 'I am bore with the MUSIC.
+
+        Use "[" and "]" to SWITCH MUSICs.'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1094751729
+Transform:
+  m_PrefabParentObject: {fileID: 465558, guid: b8d4109a7ad13fc42811d0003061ee08, type: 2}
+  m_PrefabInternal: {fileID: 1094751728}
 --- !u!1 &1096012127
 GameObject:
   m_ObjectHideFlags: 0
@@ -66555,7 +66623,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6355d71de1de6ba40afa6433c6c06f66, type: 2}
+  - {fileID: 2100000, guid: 3e6d4d5f25b90f941a42ab5c413d22ea, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -89948,7 +90016,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6db5391367a7b2c49b3f820ca3d7a2c4, type: 2}
+  - {fileID: 2100000, guid: f06280f8791453a489ceced4f72ac749, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -109303,7 +109371,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 80d65427edff84c4fa56409e98f607b5, type: 2}
+  - {fileID: 2100000, guid: ef45b60e9588d264a907403c531c92e1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -117154,6 +117222,7 @@ Transform:
   - {fileID: 459468}
   - {fileID: 1435431978}
   - {fileID: 373047067}
+  - {fileID: 1094751729}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1001 &2137378900
