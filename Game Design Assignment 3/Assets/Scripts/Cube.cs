@@ -59,7 +59,11 @@ public class Cube : MonoBehaviour
 			pushDir = dir;
             if (isHitUp)
             {
-                hitUp.collider.gameObject.GetComponent<Cube>().Move(dir);
+                var upperCube =  hitUp.collider.gameObject.GetComponent<Cube>();
+                if (upperCube)
+                {
+                    upperCube.Move(dir);
+                }
             }
         }
         else
